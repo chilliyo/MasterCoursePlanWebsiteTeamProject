@@ -1,0 +1,159 @@
+COURSE_NUMBER,COURSE_NAME,PREREQUISITE
+CSC400,DiscreteStructuresforComputerScience,
+CSC401,IntroductiontoProgramming,None
+CSC402,DataStructuresI,CSC 401
+CSC403,DataStructuresII,CSC 402
+CSC406,SystemsI,CSC 401
+CSC407,SystemsII,CSC 406 and CSC 402
+CSC421,AppliedAlgorithmsandStructures,CSC 400 and CSC 403
+CSC435,DistributedSystemsI,CSC 403 and CSC 407
+CSC447,ConceptsofProgrammingLanguages,CSC 403 and CSC 406
+CSC453,DatabaseTechnologies,CSC 403
+SE450,Object-OrientedSoftwareDevelopment,CSC 403
+CSC436,WebApplications,CSC 435 and CSC 447
+CSC438,FrameworkforWebApplicationDevelopment,
+CSC439,ComputerSecurity,
+CSC443,IntroductiontoOperatingSystems,
+CSC448,CompilerDesign,CSC 447
+CSC461,OptimizedC,CSC 400 and CSC 403 and CSC 406
+CSC462,CMultithreading,GAM 491 or CSC 461
+CSC471,MobileApplicationDevelopmentforiOS,CSC 403 and CSC 407
+CSC472,MobileApplicationDevelopmentforAndroid,CSC 403 and CSC 407
+CSC475,IntroductiontoRobotics,
+CSC534,SoftwareDevelopmentforLimitedandEmbeddedDevices,SE 450
+CSC536,DistributedSystemsII,CSC 435
+CSC540,MobileApplicationDevelopmentII,CSC 471
+CSC548,AdvancedCompilerDesign,CSC 448.
+CSC549,DatabaseSystemImplementation,CSC 453
+CSC551,DistributedDatabaseSystems,CSC 453 and (CSC 435 or TDC 405 or TDC 463)
+CSC552,ConcurrentSoftwareDevelopment,SE 450 and CSC 407
+CSC553,AdvancedDatabaseConcepts,CSC 453.
+CSC595,TopicsinComputerScience,"For specific prerequisites, see syllabus or consult course instructor. (variable credit)"
+CNS450,DigitalForensicTechniques,CSC 407 or CNS 418
+GAM690,GameDevelopmentStudioI,
+GAM691,GameDevelopmentStudioII,
+HCI441,IntroductiontoUser-CenteredDevelopment,CSC 403
+SE441,ContinuousDeliveryandDevops,CSC 403
+SE452,Object-OrientedEnterpriseComputing,CSC 403
+SE459,AgileSoftwareDevelopment,SE 450
+SE525,SoftwareSecurityArchitecture,CSC 435 and SE 450
+SE526,SoftwareSecurityAssessment,
+SE554,EnterpriseComponentArchitecture,SE 450 or SE 452.
+SE560,StructuredDocumentInterchangeandProcessing,SE 450 OR ((CSC 383 or CSC 301)  and SE 430).
+TDC478,InformationStorageandManagement,none
+TDC484,ScriptingforNetworkManagement,
+TDC568,NetworkManagement,TDC 463
+CSC431,ScientificComputing,(CSC 401 and two quarters of calculus) or instructor permission
+CSC440,Cryptology,CSC 403
+CSC444,AutomataTheoryandFormalGrammars,CSC 400 and CSC 403
+CSC489,TheoryofComputation,CSC 444 or CSC 421.
+CSC503,ParallelAlgorithms,CSC 421
+CSC521,MonteCarloAlgorithms,(CSC 402 or CSC 404) and CSC 423 or  consent of instructor
+CSC525,CombinatorialOptimization,CSC 421.
+CSC531,IntroductiontoBioinformatics,"any required will be taught in the course.  Topics will include genomics, biological databases, sequence alignment (longest common subsequence), phylogenetic trees, and protein folding. Prerequisites"
+CSC535,FormalSemanticsofProgrammingLanguages,CSC 447.
+CSC547,AdvancedTopicsinProgramLanguages,Instructor consent required.
+CSC557,FoundationsofComputerSecurity,CSC 439
+CSC580,DesignofObject-OrientedLanguages,SE 450
+CSC591,TopicsinAlgorithms,"For specific prerequisites, see syllabus or consult course instructor. (variable credit)"
+SE533,SoftwareValidationandVerification,SE 450.
+CSC423,DataAnalysisandRegression,IT 403
+CSC424,AdvancedDataAnalysis,CSC 423 or consent of instructor.
+CSC425,TimeSeriesAnalysisandForecasting,CSC 423 or MAT 456 or consent of instructor
+CSC428,DataAnalysisforExperimenters,CSC 423.
+CSC433,ScriptingforDataAnalysis,IT 403 and (CSC 401  or IT 411)
+CSC465,DataVisualization,IT 403 and (CSC 401 or IT 411)
+CSC478,ProgrammingMachineLearningApplications,IS 467 and CSC 401
+CSC481,IntroductiontoImageProcessing,CSC 412 or consent of instructor
+CSC482,AppliedImageAnalysis,CSC 481
+CSC495,SocialNetworkAnalysis,CSC 423 or SOC 412
+CSC529,AdvancedDataMining,CSC 424 and  (IS 467 or ECT 584 or CSC 578)
+CSC555,MiningBigData,CSC 401 and ( CSC 453 or CSC 455) and (IS 467 or CSC 478)
+CSC575,IntelligentInformationRetrieval,CSC 403
+CSC578,NeuralNetworksandDeepLearning,(CSC 412 and CSC 478) or consent of instructor
+CSC594,TopicsinArtificialIntelligence,"For specific prerequisites, see syllabus or consult course instructor. (variable credit)"
+CSC598,TopicsinDataAnalysis,"For specific prerequisites, see syllabus or consult course instructor. (variable credit)"
+CSC672,PredictiveAnalyticsCapstone,Instructor consent required
+ECT584,WebDataMining,IT 403 AND (CSC 451 or CSC 453 or CSC 455)
+IS467,FundamentalsofDataScience,IT 403 or CSC 423
+CSC433,ScriptingforDataAnalysis,IT 403 and (CSC 401  or IT 411)
+CSC452,DatabaseProgramming,(CSC 453 or CSC 451 or CSC 455) and (CSC 401 or IT 411)
+CSC454,DatabaseAdministrationandManagement,CSC 451 or CSC 453 or CSC 455
+CSC478,ProgrammingMachineLearningApplications,IS 467 and CSC 401
+CSC529,AdvancedDataMining,CSC 424 and  (IS 467 or ECT 584 or CSC 578)
+CSC543,SpatialDatabasesandGeographicInformationSystems,CSC 453 or CSC 455
+CSC549,DatabaseSystemImplementation,CSC 453
+CSC551,DistributedDatabaseSystems,CSC 453 and (CSC 435 or TDC 405 or TDC 463)
+CSC553,AdvancedDatabaseConcepts,CSC 453.
+CSC554,AdvancedDatabaseManagement,
+CSC555,MiningBigData,CSC 401 and ( CSC 453 or CSC 455) and (IS 467 or CSC 478)
+CSC575,IntelligentInformationRetrieval,CSC 403
+CSC589,TopicsinDatabase,"For specific prerequisites, see syllabus or consult with course instructor. (variable credit)"
+CSC457,ExpertSystems,CSC 403
+CSC458,SymbolicProgramming,CSC 403
+CSC478,ProgrammingMachineLearningApplications,IS 467 and CSC 401
+CSC480,ArtificialIntelligenceI,CSC 403
+CSC481,IntroductiontoImageProcessing,CSC 412 or consent of instructor
+CSC482,AppliedImageAnalysis,CSC 481
+CSC495,SocialNetworkAnalysis,CSC 423 or SOC 412
+CSC528,ComputerVision,CSC 481
+CSC529,AdvancedDataMining,CSC 424 and  (IS 467 or ECT 584 or CSC 578)
+CSC538,VisionSystems,CSC 528
+CSC575,IntelligentInformationRetrieval,CSC 403
+CSC576,ComputationalAdvertising,
+CSC577,RecommenderSystems,SE 450 and (IS 467 or CSC 478 or ECT 584)
+CSC578,NeuralNetworksandDeepLearning,(CSC 412 and CSC 478) or consent of instructor
+CSC583,ArtificialIntelligenceII,CSC 480
+CSC587,CognitiveScience,CSC 403 or HCI 460.
+CSC592,TopicsinComputerVisionandPatternRecognition,CSC 482 or CSC 528
+CSC594,TopicsinArtificialIntelligence,"For specific prerequisites, see syllabus or consult course instructor. (variable credit)"
+ECT584,WebDataMining,IT 403 AND (CSC 451 or CSC 453 or CSC 455)
+GEO441,GeographicInformationSystems(Gis)forCommunityDevelopment,
+GEO442,GeographicalInformationSystems(Gis)forSustainableUrbanDevelopment,
+IS467,FundamentalsofDataScience,IT 403 or CSC 423
+SE430,ObjectOrientedModeling,CSC 403
+SE433,SoftwareTestingandQualityAssurance,CSC 403
+SE441,ContinuousDeliveryandDevops,CSC 403
+SE452,Object-OrientedEnterpriseComputing,CSC 403
+SE453,ArchitectureandFrameworksforDevelopingClientApplications,
+SE456,ArchitectureofReal-TimeSystems,CSC 403
+SE457,Service-OrientedArchitecture,
+SE459,AgileSoftwareDevelopment,SE 450
+SE475,ManagingGloballyDistributedSoftwareDevelopment,CSC 403
+SE477,SoftwareandSystemsProjectManagement,"Knowledge of the Software development life cycle model, for example through courses such as SE430, ECT455, IS425, MIS555 or through appropriate work experience."
+SE480,SoftwareArchitectureI,SE 450
+SE482,RequirementsEngineering,
+SE491,SoftwareEngineeringStudio,SE 450.
+SE525,SoftwareSecurityArchitecture,CSC 435 and SE 450
+SE526,SoftwareSecurityAssessment,
+SE529,SoftwareRiskManagement,IT 403 and SE 430 or consent.
+SE533,SoftwareValidationandVerification,SE 450.
+SE546,SoftwareArchitectureandDesignforDesktopApplications,
+SE549,Model-DrivenSoftwareDevelopment,SE 430 or SE 450
+SE554,EnterpriseComponentArchitecture,SE 450 or SE 452.
+SE556,AdvancedArchitectureofComputerGames,SE 456 and CSC 407
+SE560,StructuredDocumentInterchangeandProcessing,SE 450 OR ((CSC 383 or CSC 301)  and SE 430).
+SE579,AnalyticsandDataMininginSoftwareEngineering,SE 450
+SE581,SoftwareArchitectureII,SE 480
+SE582,Software-IntensiveSystemsEngineeringandManagement,(SE 477 or PM 430 or IS 430) and (SE 430 or SE 482 or IS 485)
+SE591,SoftwareEngineeringStudioII,SE 491
+CSC461,OptimizedC,CSC 400 and CSC 403 and CSC 406
+CSC462,CMultithreading,GAM 491 or CSC 461
+GAM450,PhysicsforGameDevelopers,CSC 461 and (SE 456 or SE 450)
+GAM453,ToolProgrammingforGameDevelopment,CSC 461 and (SE 456 or SE 450)
+GAM475,GameEngineProgrammingI,GPH 469 and (SE 456 or SE 450)
+GAM476,ArtificialIntelligenceforComputerGames,CSC 461 and (SE 456 or SE 450)
+GAM486,GameProgrammingforMobileDevices,CSC 471
+GAM490,MultiplayerGameDevelopment,CSC 461 and (SE 456 or SE 450)
+GAM575,GameEngineProgrammingII,GAM 475
+GAM576,GameEngineProgrammingIII,GAM 575
+GAM690,GameDevelopmentStudioI,
+GAM691,GameDevelopmentStudioII,
+GPH436,FundamentalsofComputerGraphics,CSC 393 and MAT 150.
+GPH469,ComputerGraphicsDevelopment,CSC 461 and (GAM 425 or GPH 436)
+GPH570,Visualization,GPH 469.
+GPH572,PrinciplesofComputerAnimation,GPH 469.
+GPH580,HardwareShadingTechniques,GPH 469
+HCI440,IntroductiontoUser-CenteredDesign,None
+SE456,ArchitectureofReal-TimeSystems,CSC 403
+SE556,AdvancedArchitectureofComputerGames,SE 456 and CSC 407
