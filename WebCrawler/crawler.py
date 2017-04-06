@@ -1,3 +1,7 @@
+'''
+Author: Qili Sui
+Master Course Plan Website Team Project
+'''
 import csv
 import urllib
 import re
