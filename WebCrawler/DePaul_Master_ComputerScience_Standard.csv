@@ -1,159 +1,159 @@
 COURSE_NUMBER,COURSE_NAME,PREREQUISITE,CLASS_TYPE,SUMMER,ONLINE
-CSC400,Discrete Structures for Computer Science,,N/A,1
-CSC401,Introduction to Programming,None,N/A,1
-CSC402,Data Structures I,CSC 401,N/A,1
-CSC403,Data Structures II,CSC 402,N/A,1
-CSC406,Systems I,CSC 401,N/A,1
-CSC407,Systems II,CSC 406 and CSC 402,N/A,1
-CSC421,Applied Algorithms and Structures,CSC 400 and CSC 403,N/A,0
-CSC435,Distributed Systems I,CSC 403 and CSC 407,N/A,0
-CSC447,Concepts of Programming Languages,CSC 403 and CSC 406,N/A,0
-CSC453,Database Technologies,CSC 403,N/A,0
-SE450,Object-Oriented Software Development,CSC 403,N/A,1
-CSC436,Web Applications,CSC 435 and CSC 447,N/A,0
-CSC438,Framework for Web Application Development,,N/A,0
-CSC439,Computer Security,,N/A,0
-CSC443,Introduction to Operating Systems,,N/A,0
-CSC448,Compiler Design,CSC 447,N/A,0
-CSC461,Optimized C++,CSC 400 and CSC 403 and CSC 406,N/A,0
-CSC462,C++ Multithreading,GAM 491 or CSC 461,N/A,0
-CSC471,Mobile Application Development for iOS,CSC 403 and CSC 407,N/A,0
-CSC472,Mobile Application Development for Android,CSC 403 and CSC 407,N/A,0
-CSC475,Introduction to Robotics,,N/A,0
-CSC534,Software Development for Limited and Embedded Devices,SE 450,N/A,0
-CSC536,Distributed Systems II,CSC 435,N/A,0
-CSC540,Mobile Application Development II,CSC 471,N/A,0
-CSC548,Advanced Compiler Design,CSC 448.,N/A,0
-CSC549,Database System Implementation,CSC 453,N/A,0
-CSC551,Distributed Database Systems,CSC 453 and (CSC 435 or TDC 405 or TDC 463),N/A,0
-CSC552,Concurrent Software Development,SE 450 and CSC 407,N/A,0
-CSC553,Advanced Database Concepts,CSC 453.,N/A,0
-CSC595,Topics in Computer Science,"For specific prerequisites, see syllabus or consult course instructor. (variable credit)",N/A,0
-CNS450,Digital Forensic Techniques,CSC 407 or CNS 418,N/A,0
-GAM690,Game Development Studio I,,N/A,0
-GAM691,Game Development Studio II,,N/A,0
-HCI441,Introduction to User-Centered Development,CSC 403,N/A,0
-SE441,Continuous Delivery and Devops,CSC 403,N/A,0
-SE452,Object-Oriented Enterprise Computing,CSC 403,N/A,0
-SE459,Agile Software Development,SE 450,N/A,0
-SE525,Software Security Architecture,CSC 435 and SE 450,N/A,0
-SE526,Software Security Assessment,,N/A,0
-SE554,Enterprise Component Architecture,SE 450 or SE 452.,N/A,0
-SE560,Structured Document Interchange and Processing,SE 450 OR ((CSC 383 or CSC 301)  and SE 430).,N/A,0
-TDC478,Information Storage and Management,none,N/A,0
-TDC484,Scripting for Network Management,TDC 413,N/A,0
-TDC568,Network Management,TDC 463,N/A,0
-CSC431,Scientific Computing,(CSC 401 and two quarters of calculus) or instructor permission,N/A,0
-CSC440,Cryptology,CSC 403,N/A,0
-CSC444,Automata Theory and Formal Grammars,CSC 400 and CSC 403,N/A,0
-CSC489,Theory of Computation,CSC 444 or CSC 421.,N/A,0
-CSC503,Parallel Algorithms,CSC 421,N/A,0
-CSC521,Monte Carlo Algorithms,(CSC 402 or CSC 404) and CSC 423 or  consent of instructor,N/A,0
-CSC525,Combinatorial Optimization,CSC 421.,N/A,0
-CSC531,Introduction to Bioinformatics,"any required will be taught in the course.  Topics will include genomics, biological databases, sequence alignment (longest common subsequence), phylogenetic trees, and protein folding. Prerequisites",N/A,0
-CSC535,Formal Semantics of Programming Languages,CSC 447.,N/A,0
-CSC547,Advanced Topics in Program Languages,Instructor consent required.,N/A,0
-CSC557,Foundations of Computer Security,CSC 439,N/A,0
-CSC580,Design of Object-Oriented Languages,SE 450,N/A,0
-CSC591,Topics in Algorithms,"For specific prerequisites, see syllabus or consult course instructor. (variable credit)",N/A,0
-SE533,Software Validation and Verification,SE 450.,N/A,0
-CSC423,Data Analysis and Regression,IT 403,N/A,1
-CSC424,Advanced Data Analysis,CSC 423 or consent of instructor.,N/A,1
-CSC425,Time Series Analysis and Forecasting,CSC 423 or MAT 456 or consent of instructor,N/A,0
-CSC428,Data Analysis for Experimenters,CSC 423.,N/A,0
-CSC433,Scripting for Data Analysis,IT 403 and (CSC 401  or IT 411),N/A,0
-CSC465,Data Visualization,IT 403 and (CSC 401 or IT 411),N/A,0
-CSC478,Programming Machine Learning Applications,IS 467 and CSC 401,N/A,0
-CSC481,Introduction to Image Processing,CSC 412 or consent of instructor,N/A,0
-CSC482,Applied Image Analysis,CSC 481,N/A,0
-CSC495,Social Network Analysis,CSC 423 or SOC 412,N/A,0
-CSC529,Advanced Data Mining,CSC 424 and  (IS 467 or ECT 584 or CSC 578),N/A,0
-CSC555,Mining Big Data,CSC 401 and ( CSC 453 or CSC 455) and (IS 467 or CSC 478),N/A,0
-CSC575,Intelligent Information Retrieval,CSC 403,N/A,0
-CSC578,Neural Networks and Deep Learning,(CSC 412 and CSC 478) or (CSC 403 and IS 467),N/A,0
-CSC594,Topics in Artificial Intelligence,"For specific prerequisites, see syllabus or consult course instructor. (variable credit)",N/A,0
-CSC598,Topics in Data Analysis,"For specific prerequisites, see syllabus or consult course instructor. (variable credit)",N/A,0
-CSC672,Predictive Analytics Capstone,Instructor consent required,N/A,0
-ECT584,Web Data Mining,IT 403 AND (CSC 451 or CSC 453 or CSC 455),N/A,1
-IS467,Fundamentals of Data Science,IT 403 or CSC 423,N/A,0
-CSC433,Scripting for Data Analysis,IT 403 and (CSC 401  or IT 411),N/A,0
-CSC452,Database Programming,(CSC 453 or CSC 451 or CSC 455) and (CSC 401 or IT 411),N/A,1
-CSC454,Database Administration and Management,CSC 451 or CSC 453 or CSC 455,N/A,1
-CSC478,Programming Machine Learning Applications,IS 467 and CSC 401,N/A,0
-CSC529,Advanced Data Mining,CSC 424 and  (IS 467 or ECT 584 or CSC 578),N/A,0
-CSC543,Spatial Databases and Geographic Information Systems,CSC 453 or CSC 455,N/A,0
-CSC549,Database System Implementation,CSC 453,N/A,0
-CSC551,Distributed Database Systems,CSC 453 and (CSC 435 or TDC 405 or TDC 463),N/A,0
-CSC553,Advanced Database Concepts,CSC 453.,N/A,0
-CSC554,Advanced Database Management,,N/A,0
-CSC555,Mining Big Data,CSC 401 and ( CSC 453 or CSC 455) and (IS 467 or CSC 478),N/A,0
-CSC575,Intelligent Information Retrieval,CSC 403,N/A,0
-CSC589,Topics in Database,"For specific prerequisites, see syllabus or consult with course instructor. (variable credit)",N/A,0
-CSC457,Expert Systems,CSC 403,N/A,0
-CSC458,Symbolic Programming,CSC 403,N/A,0
-CSC478,Programming Machine Learning Applications,IS 467 and CSC 401,N/A,0
-CSC480,Artificial Intelligence I,CSC 403,N/A,0
-CSC481,Introduction to Image Processing,CSC 412 or consent of instructor,N/A,0
-CSC482,Applied Image Analysis,CSC 481,N/A,0
-CSC495,Social Network Analysis,CSC 423 or SOC 412,N/A,0
-CSC528,Computer Vision,CSC 481,N/A,0
-CSC529,Advanced Data Mining,CSC 424 and  (IS 467 or ECT 584 or CSC 578),N/A,0
-CSC538,Vision Systems,CSC 528,N/A,0
-CSC575,Intelligent Information Retrieval,CSC 403,N/A,0
-CSC576,Computational Advertising,,N/A,0
-CSC577,Recommender Systems,SE 450 and (IS 467 or CSC 478 or ECT 584),N/A,0
-CSC578,Neural Networks and Deep Learning,(CSC 412 and CSC 478) or (CSC 403 and IS 467),N/A,0
-CSC583,Artificial Intelligence II,CSC 480,N/A,0
-CSC587,Cognitive Science,CSC 403 or HCI 460.,N/A,0
-CSC592,Topics in Computer Vision and Pattern Recognition,CSC 482 or CSC 528,N/A,0
-CSC594,Topics in Artificial Intelligence,"For specific prerequisites, see syllabus or consult course instructor. (variable credit)",N/A,0
-ECT584,Web Data Mining,IT 403 AND (CSC 451 or CSC 453 or CSC 455),N/A,1
-GEO441,Geographic Information Systems (Gis) for Community Development,,N/A,1
-GEO442,Geographical Information Systems (Gis) for Sustainable Urban Development,,N/A,0
-IS467,Fundamentals of Data Science,IT 403 or CSC 423,N/A,0
-SE430,Object Oriented Modeling,CSC 403,N/A,1
-SE433,Software Testing and Quality Assurance,CSC 403,N/A,0
-SE441,Continuous Delivery and Devops,CSC 403,N/A,0
-SE452,Object-Oriented Enterprise Computing,CSC 403,N/A,0
-SE453,Architecture and Frameworks for Developing Client Applications,,N/A,0
-SE456,Architecture of Real-Time Systems,CSC 403,N/A,0
-SE457,Service-Oriented Architecture,,N/A,0
-SE459,Agile Software Development,SE 450,N/A,0
-SE475,Managing Globally Distributed Software Development,CSC 403,N/A,0
-SE477,Software and Systems Project Management,"Knowledge of the Software development life cycle model, for example through courses such as SE430, ECT455, IS425, MIS555 or through appropriate work experience.",N/A,0
-SE480,Software Architecture I,SE 450,N/A,0
-SE482,Requirements Engineering,,N/A,0
-SE491,Software Engineering Studio,SE 450.,N/A,0
-SE525,Software Security Architecture,CSC 435 and SE 450,N/A,0
-SE526,Software Security Assessment,,N/A,0
-SE529,Software Risk Management,IT 403 and SE 430 or consent.,N/A,0
-SE533,Software Validation and Verification,SE 450.,N/A,0
-SE546,Software Architecture and Design for Desktop Applications,,N/A,0
-SE549,Model-Driven Software Development,SE 430 or SE 450,N/A,0
-SE554,Enterprise Component Architecture,SE 450 or SE 452.,N/A,0
-SE556,Advanced Architecture of Computer Games,SE 456 and CSC 407,N/A,0
-SE560,Structured Document Interchange and Processing,SE 450 OR ((CSC 383 or CSC 301)  and SE 430).,N/A,0
-SE579,Analytics and Data Mining in Software Engineering,SE 450,N/A,0
-SE581,Software Architecture II,SE 480,N/A,0
-SE582,Software-Intensive Systems Engineering and Management,(SE 477 or PM 430 or IS 430) and (SE 430 or SE 482 or IS 485),N/A,0
-SE591,Software Engineering Studio II,SE 491,N/A,0
-CSC461,Optimized C++,CSC 400 and CSC 403 and CSC 406,N/A,0
-CSC462,C++ Multithreading,GAM 491 or CSC 461,N/A,0
-GAM450,Physics for Game Developers,CSC 461 and (SE 456 or SE 450),N/A,0
-GAM453,Tool Programming for Game Development,CSC 461 and (SE 456 or SE 450),N/A,0
-GAM475,Game Engine Programming I,CSC 461 and (SE 456 or SE 450),N/A,0
-GAM476,Artificial Intelligence for Computer Games,CSC 461 and (SE 456 or SE 450),N/A,0
-GAM486,Game Programming for Mobile Devices,CSC 471,N/A,0
-GAM486,Game Programming for Mobile Devices,,N/A,0
-GAM575,Game Engine Programming II,GAM 475,N/A,0
-GAM576,Game Engine Programming III,GAM 575,N/A,0
-GAM690,Game Development Studio I,,N/A,0
-GAM691,Game Development Studio II,,N/A,0
-GPH436,Fundamentals of Computer Graphics,CSC 393 and MAT 150.,N/A,0
-GPH469,Computer Graphics Development,CSC 461 and (GAM 425 or GPH 436),N/A,0
-GPH570,Visualization,GPH 469 or GAM 470,N/A,0
-GPH572,Principles of Computer Animation,GPH 469.,N/A,0
-GPH580,Hardware Shading Techniques,GPH 469 or GAM 470,N/A,0
-HCI440,Introduction to User-Centered Design,None,N/A,1
-SE456,Architecture of Real-Time Systems,CSC 403,N/A,0
-SE556,Advanced Architecture of Computer Games,SE 456 and CSC 407,N/A,0
+CSC400,Discrete Structures for Computer Science,,N/A,1,1
+CSC401,Introduction to Programming,None,N/A,1,1
+CSC402,Data Structures I,CSC 401,N/A,1,1
+CSC403,Data Structures II,CSC 402,N/A,1,1
+CSC406,Systems I,CSC 401,N/A,1,1
+CSC407,Systems II,CSC 406 and CSC 402,N/A,1,1
+CSC421,Applied Algorithms and Structures,CSC 400 and CSC 403,N/A,0,1
+CSC435,Distributed Systems I,CSC 403 and CSC 407,N/A,0,1
+CSC447,Concepts of Programming Languages,CSC 403 and CSC 406,N/A,0,1
+CSC453,Database Technologies,CSC 403,N/A,0,1
+SE450,Object-Oriented Software Development,CSC 403,N/A,1,1
+CSC436,Web Applications,CSC 435 and CSC 447,N/A,0,1
+CSC438,Framework for Web Application Development,,N/A,0,1
+CSC439,Computer Security,,N/A,0,1
+CSC443,Introduction to Operating Systems,,N/A,0,1
+CSC448,Compiler Design,CSC 447,N/A,0,1
+CSC461,Optimized C++,CSC 400 and CSC 403 and CSC 406,N/A,0,1
+CSC462,C++ Multithreading,GAM 491 or CSC 461,N/A,0,1
+CSC471,Mobile Application Development for iOS,CSC 403 and CSC 407,N/A,0,1
+CSC472,Mobile Application Development for Android,CSC 403 and CSC 407,N/A,0,1
+CSC475,Introduction to Robotics,,N/A,0,0
+CSC534,Software Development for Limited and Embedded Devices,SE 450,N/A,0,0
+CSC536,Distributed Systems II,CSC 435,N/A,0,1
+CSC540,Mobile Application Development II,CSC 471,N/A,0,0
+CSC548,Advanced Compiler Design,CSC 448.,N/A,0,0
+CSC549,Database System Implementation,CSC 453,N/A,0,1
+CSC551,Distributed Database Systems,CSC 453 and (CSC 435 or TDC 405 or TDC 463),N/A,0,0
+CSC552,Concurrent Software Development,SE 450 and CSC 407,N/A,0,1
+CSC553,Advanced Database Concepts,CSC 453.,N/A,0,1
+CSC595,Topics in Computer Science,"For specific prerequisites, see syllabus or consult course instructor. (variable credit)",N/A,0,0
+CNS450,Digital Forensic Techniques,CSC 407 or CNS 418,N/A,0,1
+GAM690,Game Development Studio I,,N/A,0,0
+GAM691,Game Development Studio II,,N/A,0,0
+HCI441,Introduction to User-Centered Development,CSC 403,N/A,0,0
+SE441,Continuous Delivery and Devops,CSC 403,N/A,0,1
+SE452,Object-Oriented Enterprise Computing,CSC 403,N/A,0,1
+SE459,Agile Software Development,SE 450,N/A,0,1
+SE525,Software Security Architecture,CSC 435 and SE 450,N/A,0,1
+SE526,Software Security Assessment,,N/A,0,1
+SE554,Enterprise Component Architecture,SE 450 or SE 452.,N/A,0,1
+SE560,Structured Document Interchange and Processing,SE 450 OR ((CSC 383 or CSC 301)  and SE 430).,N/A,0,1
+TDC478,Information Storage and Management,none,N/A,0,1
+TDC484,Scripting for Network Management,TDC 413,N/A,0,1
+TDC568,Network Management,TDC 463,N/A,0,1
+CSC431,Scientific Computing,(CSC 401 and two quarters of calculus) or instructor permission,N/A,0,1
+CSC440,Cryptology,CSC 403,N/A,0,1
+CSC444,Automata Theory and Formal Grammars,CSC 400 and CSC 403,N/A,0,1
+CSC489,Theory of Computation,CSC 444 or CSC 421.,N/A,0,1
+CSC503,Parallel Algorithms,CSC 421,N/A,0,1
+CSC521,Monte Carlo Algorithms,(CSC 402 or CSC 404) and CSC 423 or  consent of instructor,N/A,0,1
+CSC525,Combinatorial Optimization,CSC 421.,N/A,0,1
+CSC531,Introduction to Bioinformatics,"any required will be taught in the course.  Topics will include genomics, biological databases, sequence alignment (longest common subsequence), phylogenetic trees, and protein folding. Prerequisites",N/A,0,1
+CSC535,Formal Semantics of Programming Languages,CSC 447.,N/A,0,1
+CSC547,Advanced Topics in Program Languages,Instructor consent required.,N/A,0,0
+CSC557,Foundations of Computer Security,CSC 439,N/A,0,0
+CSC580,Design of Object-Oriented Languages,SE 450,N/A,0,0
+CSC591,Topics in Algorithms,"For specific prerequisites, see syllabus or consult course instructor. (variable credit)",N/A,0,0
+SE533,Software Validation and Verification,SE 450.,N/A,0,0
+CSC423,Data Analysis and Regression,IT 403,N/A,1,1
+CSC424,Advanced Data Analysis,CSC 423 or consent of instructor.,N/A,1,1
+CSC425,Time Series Analysis and Forecasting,CSC 423 or MAT 456 or consent of instructor,N/A,0,1
+CSC428,Data Analysis for Experimenters,CSC 423.,N/A,0,0
+CSC433,Scripting for Data Analysis,IT 403 and (CSC 401  or IT 411),N/A,0,1
+CSC465,Data Visualization,IT 403 and (CSC 401 or IT 411),N/A,0,1
+CSC478,Programming Machine Learning Applications,IS 467 and CSC 401,N/A,0,1
+CSC481,Introduction to Image Processing,CSC 412 or consent of instructor,N/A,0,1
+CSC482,Applied Image Analysis,CSC 481,N/A,0,1
+CSC495,Social Network Analysis,CSC 423 or SOC 412,N/A,0,1
+CSC529,Advanced Data Mining,CSC 424 and  (IS 467 or ECT 584 or CSC 578),N/A,0,1
+CSC555,Mining Big Data,CSC 401 and ( CSC 453 or CSC 455) and (IS 467 or CSC 478),N/A,0,1
+CSC575,Intelligent Information Retrieval,CSC 403,N/A,0,1
+CSC578,Neural Networks and Deep Learning,(CSC 412 and CSC 478) or (CSC 403 and IS 467),N/A,0,1
+CSC594,Topics in Artificial Intelligence,"For specific prerequisites, see syllabus or consult course instructor. (variable credit)",N/A,0,1
+CSC598,Topics in Data Analysis,"For specific prerequisites, see syllabus or consult course instructor. (variable credit)",N/A,0,0
+CSC672,Predictive Analytics Capstone,Instructor consent required,N/A,0,1
+ECT584,Web Data Mining,IT 403 AND (CSC 451 or CSC 453 or CSC 455),N/A,1,1
+IS467,Fundamentals of Data Science,IT 403 or CSC 423,N/A,0,1
+CSC433,Scripting for Data Analysis,IT 403 and (CSC 401  or IT 411),N/A,0,1
+CSC452,Database Programming,(CSC 453 or CSC 451 or CSC 455) and (CSC 401 or IT 411),N/A,1,1
+CSC454,Database Administration and Management,CSC 451 or CSC 453 or CSC 455,N/A,1,1
+CSC478,Programming Machine Learning Applications,IS 467 and CSC 401,N/A,0,1
+CSC529,Advanced Data Mining,CSC 424 and  (IS 467 or ECT 584 or CSC 578),N/A,0,1
+CSC543,Spatial Databases and Geographic Information Systems,CSC 453 or CSC 455,N/A,0,1
+CSC549,Database System Implementation,CSC 453,N/A,0,1
+CSC551,Distributed Database Systems,CSC 453 and (CSC 435 or TDC 405 or TDC 463),N/A,0,0
+CSC553,Advanced Database Concepts,CSC 453.,N/A,0,1
+CSC554,Advanced Database Management,,N/A,0,1
+CSC555,Mining Big Data,CSC 401 and ( CSC 453 or CSC 455) and (IS 467 or CSC 478),N/A,0,1
+CSC575,Intelligent Information Retrieval,CSC 403,N/A,0,1
+CSC589,Topics in Database,"For specific prerequisites, see syllabus or consult with course instructor. (variable credit)",N/A,0,0
+CSC457,Expert Systems,CSC 403,N/A,0,0
+CSC458,Symbolic Programming,CSC 403,N/A,0,1
+CSC478,Programming Machine Learning Applications,IS 467 and CSC 401,N/A,0,1
+CSC480,Artificial Intelligence I,CSC 403,N/A,0,1
+CSC481,Introduction to Image Processing,CSC 412 or consent of instructor,N/A,0,1
+CSC482,Applied Image Analysis,CSC 481,N/A,0,1
+CSC495,Social Network Analysis,CSC 423 or SOC 412,N/A,0,1
+CSC528,Computer Vision,CSC 481,N/A,0,1
+CSC529,Advanced Data Mining,CSC 424 and  (IS 467 or ECT 584 or CSC 578),N/A,0,1
+CSC538,Vision Systems,CSC 528,N/A,0,0
+CSC575,Intelligent Information Retrieval,CSC 403,N/A,0,1
+CSC576,Computational Advertising,,N/A,0,1
+CSC577,Recommender Systems,SE 450 and (IS 467 or CSC 478 or ECT 584),N/A,0,1
+CSC578,Neural Networks and Deep Learning,(CSC 412 and CSC 478) or (CSC 403 and IS 467),N/A,0,1
+CSC583,Artificial Intelligence II,CSC 480,N/A,0,0
+CSC587,Cognitive Science,CSC 403 or HCI 460.,N/A,0,1
+CSC592,Topics in Computer Vision and Pattern Recognition,CSC 482 or CSC 528,N/A,0,0
+CSC594,Topics in Artificial Intelligence,"For specific prerequisites, see syllabus or consult course instructor. (variable credit)",N/A,0,1
+ECT584,Web Data Mining,IT 403 AND (CSC 451 or CSC 453 or CSC 455),N/A,1,1
+GEO441,Geographic Information Systems (Gis) for Community Development,,N/A,1,1
+GEO442,Geographical Information Systems (Gis) for Sustainable Urban Development,,N/A,0,0
+IS467,Fundamentals of Data Science,IT 403 or CSC 423,N/A,0,1
+SE430,Object Oriented Modeling,CSC 403,N/A,1,1
+SE433,Software Testing and Quality Assurance,CSC 403,N/A,0,1
+SE441,Continuous Delivery and Devops,CSC 403,N/A,0,1
+SE452,Object-Oriented Enterprise Computing,CSC 403,N/A,0,1
+SE453,Architecture and Frameworks for Developing Client Applications,,N/A,0,0
+SE456,Architecture of Real-Time Systems,CSC 403,N/A,0,1
+SE457,Service-Oriented Architecture,,N/A,0,1
+SE459,Agile Software Development,SE 450,N/A,0,1
+SE475,Managing Globally Distributed Software Development,CSC 403,N/A,0,1
+SE477,Software and Systems Project Management,"Knowledge of the Software development life cycle model, for example through courses such as SE430, ECT455, IS425, MIS555 or through appropriate work experience.",N/A,0,1
+SE480,Software Architecture I,SE 450,N/A,0,1
+SE482,Requirements Engineering,,N/A,0,1
+SE491,Software Engineering Studio,SE 450.,N/A,0,1
+SE525,Software Security Architecture,CSC 435 and SE 450,N/A,0,1
+SE526,Software Security Assessment,,N/A,0,1
+SE529,Software Risk Management,IT 403 and SE 430 or consent.,N/A,0,1
+SE533,Software Validation and Verification,SE 450.,N/A,0,0
+SE546,Software Architecture and Design for Desktop Applications,,N/A,0,0
+SE549,Model-Driven Software Development,SE 430 or SE 450,N/A,0,0
+SE554,Enterprise Component Architecture,SE 450 or SE 452.,N/A,0,1
+SE556,Advanced Architecture of Computer Games,SE 456 and CSC 407,N/A,0,0
+SE560,Structured Document Interchange and Processing,SE 450 OR ((CSC 383 or CSC 301)  and SE 430).,N/A,0,1
+SE579,Analytics and Data Mining in Software Engineering,SE 450,N/A,0,1
+SE581,Software Architecture II,SE 480,N/A,0,1
+SE582,Software-Intensive Systems Engineering and Management,(SE 477 or PM 430 or IS 430) and (SE 430 or SE 482 or IS 485),N/A,0,0
+SE591,Software Engineering Studio II,SE 491,N/A,0,1
+CSC461,Optimized C++,CSC 400 and CSC 403 and CSC 406,N/A,0,1
+CSC462,C++ Multithreading,GAM 491 or CSC 461,N/A,0,1
+GAM450,Physics for Game Developers,CSC 461 and (SE 456 or SE 450),N/A,0,1
+GAM453,Tool Programming for Game Development,CSC 461 and (SE 456 or SE 450),N/A,0,1
+GAM475,Game Engine Programming I,CSC 461 and (SE 456 or SE 450),N/A,0,1
+GAM476,Artificial Intelligence for Computer Games,CSC 461 and (SE 456 or SE 450),N/A,0,1
+GAM486,Game Programming for Mobile Devices,CSC 471,N/A,0,1
+GAM486,Game Programming for Mobile Devices,,N/A,0,0
+GAM575,Game Engine Programming II,GAM 475,N/A,0,1
+GAM576,Game Engine Programming III,GAM 575,N/A,0,1
+GAM690,Game Development Studio I,,N/A,0,0
+GAM691,Game Development Studio II,,N/A,0,0
+GPH436,Fundamentals of Computer Graphics,CSC 393 and MAT 150.,N/A,0,1
+GPH469,Computer Graphics Development,CSC 461 and (GAM 425 or GPH 436),N/A,0,1
+GPH570,Visualization,GPH 469 or GAM 470,N/A,0,1
+GPH572,Principles of Computer Animation,GPH 469.,N/A,0,1
+GPH580,Hardware Shading Techniques,GPH 469 or GAM 470,N/A,0,1
+HCI440,Introduction to User-Centered Design,None,N/A,1,1
+SE456,Architecture of Real-Time Systems,CSC 403,N/A,0,1
+SE556,Advanced Architecture of Computer Games,SE 456 and CSC 407,N/A,0,0

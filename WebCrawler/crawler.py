@@ -73,9 +73,25 @@ def get_course_detail_page(courseURLs):
             #print (quarter.text[0:5] == 'Summe')
             if quarter.text[0:6] == 'Summer':
                 if_offers_summer = 1
+                break
                 #print if_offers_summer
 
         #check if the class was offered online
+        class_location_list = []
+        if_offers_online = 0
+        class_info = soup.findAll('div', {'class': 'classInfo'})
+        for info in class_info:
+            children = info.findChildren()
+            try:
+                class_location_list.append(children[3].text)
+            except:
+                pass
+
+        for location in class_location_list:
+            if location[-13:-1] == 'Online Campu':
+                if_offers_online = 1
+                break
+
 
         #cleaning the data
         stripped_course_row = []
@@ -86,7 +102,8 @@ def get_course_detail_page(courseURLs):
         stripped_course_row.append(PREREQUISITE_classes)
         stripped_course_row.append('N/A')
         stripped_course_row.append(if_offers_summer)
-        #print stripped_course_row
+        stripped_course_row.append(if_offers_online)
+        print stripped_course_row
         stripped_course_rows.append(stripped_course_row)
     return stripped_course_rows
 
