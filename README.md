@@ -28,6 +28,9 @@ Initial_Web_Crawler_Week02_April_06
 
 **Commits on Apr 18, 2017**
 
+@chilliyo:
+Updated: Manually added the Class type, see DePaul_Master_ComputerScience_Standard_manuallyAddClassType.csv
+
  @chilliyo
 Update: Added the checking for if the class was offered online. 
 
