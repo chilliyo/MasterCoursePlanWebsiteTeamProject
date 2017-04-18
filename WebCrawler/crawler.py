@@ -49,9 +49,11 @@ def get_course_detail_page(courseURLs):
         html = urllib.urlopen(url).read()
         soup = BeautifulSoup(html, "lxml")
         course_Page_title = soup.find('h2',{'class':'CDMPageTitle'})
-        course_row = course_Page_title.text.strip('\r\n ').split(':')
+        try:
+            course_row = course_Page_title.text.strip('\r\n ').split(':')
+        except:
+            pass
         PREREQUISITE = soup.find(id='ctl00_ctl63_g_50f24079_ef2e_419b_a791_15cbeadc76ee').contents
-
 
         if 'PREREQUISITE(S):' in PREREQUISITE[3].text:
             PREREQUISITE_classes = (PREREQUISITE[3].text.split(":")[1].strip(": "))
@@ -63,8 +65,12 @@ def get_course_detail_page(courseURLs):
             PREREQUISITE_classes = (PREREQUISITE[3].text.split("PREREQUISITE(S)")[1].strip(": "))
         stripped_course_row = []
         for item in course_row:
-             stripped_item = re.sub('[\s+]','',item)
-             stripped_course_row.append(stripped_item)
+            stripped_item = re.sub('\r\n\    ', '', item)
+            stripped_course_row.append(stripped_item)
+
+        for item in course_row:
+
+
         stripped_course_row.append(PREREQUISITE_classes)
         stripped_course_rows.append(stripped_course_row)
     return stripped_course_rows
@@ -72,7 +78,7 @@ def get_course_detail_page(courseURLs):
 
 def write_table(course_row):
     print("Writing Data to csv table...")
-    colums = ['COURSE_NUMBER','COURSE_NAME','PREREQUISITE']
+    colums = ['COURSE_NUMBER','COURSE_NAME','PREREQUISITE','CLASS_TYPE', 'SUMMER', 'ONLINE']
     with open('DePaul_Master_ComputerScience_Standard.csv', 'w') as myfile:
         writer = csv.writer(myfile)
         writer.writerow(colums)
