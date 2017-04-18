@@ -4,7 +4,6 @@ Master Course Plan Website Team Project
 '''
 import csv
 import urllib
-import re
 from bs4 import BeautifulSoup
 import pandas as pd
 import re
@@ -53,6 +52,8 @@ def get_course_detail_page(courseURLs):
             course_row = course_Page_title.text.strip('\r\n ').split(':')
         except:
             pass
+
+        #get PREREQUISITE
         PREREQUISITE = soup.find(id='ctl00_ctl63_g_50f24079_ef2e_419b_a791_15cbeadc76ee').contents
 
         if 'PREREQUISITE(S):' in PREREQUISITE[3].text:
@@ -63,15 +64,29 @@ def get_course_detail_page(courseURLs):
             PREREQUISITE_classes = (PREREQUISITE[3].text.split(":")[1].strip(": "))
         if 'PREREQUISITE(S)' in PREREQUISITE[3].text:
             PREREQUISITE_classes = (PREREQUISITE[3].text.split("PREREQUISITE(S)")[1].strip(": "))
+
+        #check if the class was offered in summer session
+        if_offers_summer = 0
+        offered_quarters = soup.findAll('p', {'class':'CTIPageSectionHeader'})
+        for quarter in offered_quarters:
+            #print quarter.text[0:5]
+            #print (quarter.text[0:5] == 'Summe')
+            if quarter.text[0:6] == 'Summer':
+                if_offers_summer = 1
+                #print if_offers_summer
+
+        #check if the class was offered online
+
+        #cleaning the data
         stripped_course_row = []
         for item in course_row:
             stripped_item = re.sub('\r\n\    ', '', item)
             stripped_course_row.append(stripped_item)
 
-        for item in course_row:
-
-
         stripped_course_row.append(PREREQUISITE_classes)
+        stripped_course_row.append('N/A')
+        stripped_course_row.append(if_offers_summer)
+        #print stripped_course_row
         stripped_course_rows.append(stripped_course_row)
     return stripped_course_rows
 
