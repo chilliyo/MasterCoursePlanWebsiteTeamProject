@@ -103,7 +103,7 @@ def get_course_detail_page(courseURLs):
         stripped_course_row.append('N/A')
         stripped_course_row.append(if_offers_summer)
         stripped_course_row.append(if_offers_online)
-        print stripped_course_row
+        #print (stripped_course_row)
         stripped_course_rows.append(stripped_course_row)
     return stripped_course_rows
 
