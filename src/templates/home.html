@@ -1,0 +1,60 @@
+{% extends "base.html" %}
+{% load crispy_forms_tags %}
+{% block head_title %}DePaul University |{% endblock %}
+{% block jumbotron %}
+
+<div class="jumbotron">
+    {% if not request.user.is_authenticated %}
+    <img src='http://fiuc.org/w/cms/images/sites/DePaul%20logo%20PRIMARY%20configuration%207462.jpg' class='img-responsive'/>
+    <br>
+    <br>
+    <h1>Welcome!</h1>
+    <p>Welcome to DePaul University Computer Science and Information Systems Graduate Programs. DePaul graduate programs are designed to fit into your schedule. We offer courses during the day, at night and online. Our faculty are among the best, and our connections with the city of Chicago can’t be beat.</p>
+</div>
+{% endif %}
+{% endblock %}
+{% block content %}
+{% if request.user.is_authenticated %}
+<h1>You are logged in</h1>
+    {% if queryset %}
+    <h2>Welcome Admin</h2>
+    <table class='table'>
+    {% for instance in queryset %}
+        <tr><td>{{ forloop.counter }}</td><td>{{ instance.full_name }}</td><td>{{ instance }}</td><td>{{ instance.timestamp|timesince}} ago</td></tr>
+    {% endfor %}
+    </table>
+    {% endif %}
+
+{% else %}
+<div class="row">
+  <div class="col-xs-3 pull-right">
+
+        <h1>{{ title }}</h1>
+      <h5>Please sign up to receive newsletters.</h5>
+
+        <form method='POST' action=''>{% csrf_token %}
+        {{form|crispy}}
+        <input class='btn btn-primary' type='Submit' value='Sign Up'/>
+    </form>
+  </div>
+
+    <div class='col-xs-3'>
+        <p><b>MS in Computer Science</b></p>
+        <p>DePaul's graduate Computer Science program is the premier training ground for computing professionals in the Chicago area. Unlike a certificate program, our master's courses focus on fundamental concepts that remain constant, even as technology changes rapidly. Unlike more research focused institutions, however, our courses emphasize the programmatic application of these fundamental concepts. Students interested in research will find an abundance of advanced topics medical imaging, data mining, algorithmic analysis, and scientific computing, to name a few.</p>
+        <a class="btn btn-lg btn-primary" href="http://www.cdm.depaul.edu/academics/Pages/MSInComputerScience.aspx" role="button" target="_blank">View Course List &raquo;</a>
+    </div>
+
+    <div class='col-xs-3'>
+        <p><b>MS in Information Systems</b></p>
+        <p>The MS in Information Systems fits your career path if it involves running an IT organization or managing information effectively through information systems. In today's environment, information systems (IS) are planned, operated and maintained not only by IS departments but also by IS-user organizational units. Because of this reality, career opportunities for IS graduates are found in both traditional IS departments and IS-user business units. Moreover, a variety of equipment from aircraft to household electronics frequently use embedded systems. Graduates of IS majors find opportunities in organizations that plan, design and market the functionality of these systems. Thus, our MS-IS emphasizes the balance between technical skills, modeling proficiency, as well as strategic and organizational knowledge for a wide range of IS usage contexts.</p>
+        <a class="btn btn-lg btn-primary" href="http://www.cdm.depaul.edu/academics/Pages/MSInInformationSystems.aspx" role="button" target="_blank">View Course List &raquo;</a>
+    </div>
+</div>
+<hr>
+<hr>
+<div id="footer">
+    <h5><p><center>Address: 14 E Jackson Blvd, Chicago, IL-60604 | Phone Number: 123-456-7890</center></p></h5>
+    <h5><p><center>Designed and built by Team 3 Copyright &copy; 2017-2020</center></p></h5>
+</div>
+{% endif %}
+{% endblock %}
