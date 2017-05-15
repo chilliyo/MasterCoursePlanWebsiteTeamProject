@@ -20,28 +20,17 @@ class Student(models.Model):
     password = models.CharField(max_length=50)
 
     current_credits = models.IntegerField()
-    credits_remaining = models.IntegerField()
+
     classes_per_quarter = models.IntegerField()
 
     faculty_name = models.ForeignKey('Faculty')
 
     major = models.CharField(max_length=50)
+    concentration = models.CharField(max_length=50)
     summer = models.BooleanField(default=False)
     online = models.BooleanField(default=False)
 
-    class1 = models.CharField(max_length=50)
-    class2 = models.CharField(max_length=50)
-    class3 = models.CharField(max_length=50)
-    class4 = models.CharField(max_length=50)
-    class5 = models.CharField(max_length=50)
-    class6 = models.CharField(max_length=50)
-    class7 = models.CharField(max_length=50)
-    class8 = models.CharField(max_length=50)
-    class9 = models.CharField(max_length=50)
-    class10 = models.CharField(max_length=50)
-    class11 = models.CharField(max_length=50)
-    class12 = models.CharField(max_length=50)
-    class13 = models.CharField(max_length=50)
+    class_list = models.CharField(max_length=1000)
 
 
 class Faculty(models.Model):
