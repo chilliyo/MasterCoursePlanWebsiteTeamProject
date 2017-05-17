@@ -40,6 +40,12 @@ Update: Added the checking for if the class was offered in summer session.
  @chilliyo
 Fixed: Added Space Bwtween Course Name
 
+**Commits on May 16,2017**
+
+@chilliyo:
+Update: Added Fall,Winter,Spring collumn to CS major table, see DePaul_Master_ComputerScience_Standard.csv, DePaul_Master_ComputerScience_Standard_manuallyAddClassType.csv,
+    crawler.py
+
 
 --------------------------------------------------END of Web Cralwer------------------------------------------
 
