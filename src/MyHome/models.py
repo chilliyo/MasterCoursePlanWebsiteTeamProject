@@ -1,9 +1,6 @@
 from django.db import models
 from django.contrib.auth.models import AbstractBaseUser, PremissionsMixin
 
-from django.db import models
-from django.contrib.auth.models import AbstractBaseUser, PremissionsMixin
-
 
 # Create your models here.
 class SignUp(models.Model):
