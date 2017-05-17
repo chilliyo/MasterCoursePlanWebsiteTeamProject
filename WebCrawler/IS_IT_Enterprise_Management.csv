@@ -1,0 +1,37 @@
+COURSE_NUMBER,COURSE_NAME,PREREQUISITE,CLASS_TYPE,FALL,WINTER,SPRING,SUMMER,ONLINE
+IS421,Systems Analysis,None,2,1,1,1,1,1
+CSC451,Database Design,None,2,1,1,1,1,1
+IS422,"System Design, Implementation, and Maintenance",IS 421 and CSC 451,2,1,1,1,1,1
+IS430,Fundamentals of IT Project Management,None,2,1,1,1,1,1
+ECT424,Enterprise Infrastructure,,3,1,1,1,1,1
+IS556,Enterprise Project Management,IS 430 or PM 430,3,1,1,1,0,1
+IS570,Enterprise System Implementation,IS 430 or PM 430 or completion of five or more other SoC MS level courses should contact the course instructor or an advisor.,3,1,1,0,1,1
+IS535,Information Technology Investment Financial Analysis,SE 477 or IS 565 or ACCT 500 or IS 430 or PM 430 or ECT 455,3,1,1,1,0,1
+CNS440,Information Security Management,None,4,1,1,1,0,1
+ECT556,Enterprise Architecture and Design,"frameworks, tools, and methodologies for enterprise architecture design; data and process modeling, application integration, implementation fundamentals, adaptability to changing organizational needs, and managing costs of implementation. Students will conduct case studies and develop architecture plans. Prerequisites",4,0,0,1,0,1
+IS440,Collaborative Technologies for Leading Projects,None,4,1,1,1,1,1
+IS483,Information Services and Operations,Completion of five or more SoC MS level courses is required.,4,0,1,0,0,1
+IS500,Information Technology Leadership,IS 430 OR PM 430 OR SE 477,4,1,0,1,0,1
+IS505,Business Continuity/Disaster Recovery Theories and Strategies,,4,1,1,1,1,1
+IS506,Business Continuity/Disaster Recovery Management and Tactics,IS 505,4,0,1,0,1,1
+IS535,Information Technology Investment Financial Analysis,SE 477 or IS 565 or ACCT 500 or IS 430 or PM 430 or ECT 455,4,1,1,1,0,1
+IS536,Enterprise Cloud Computing,,4,1,1,1,0,1
+IS540,Global Information Technology,Completion of five or more SoC MS level courses is required.,4,0,1,0,0,1
+IS550,Enterprise Data Management,CSC 451 or CSC 453 or CSC 455,4,1,0,0,0,1
+IS560,Enterprise Systems,Advanced Standing,4,1,0,1,0,1
+IS565,IT Outsourcing,Completion of five or more SoC MS level courses is required,4,0,1,1,0,1
+IS579,Virtual Software Teams Management,PM 430 or IS 430,4,0,0,1,0,0
+IS580,Technology Entrepreneurship,Completion of the foundation phase.,4,1,0,1,0,1
+IS577,Information Systems Policies and Strategies,Completion of ten or more SoC MS level courses is required.,5,0,1,0,1,1
+,,,,,,,,
+CDM Open Elective Courses,,,,,,,,
+Students must complete 1 CDM Open Elective Course chosen from either IS concentration courses from any IS concentration or other courses meeting the following rules:,,,,,,,,
+"Any CNS, CSC, ECT, GAM, GPH, HCI, HIT, IS, IT, PM, SE, or TDC course in the 421-699 range qualifies.",,,,,,,,
+Credit for courses taken outside of CDM will only be given if approved by a faculty advisor.,,,,,,,,
+,,,,,,,,
+Class Type For IS,,,,,,,,
+1,Inrto,,,,,,,
+2,Fundation,,,,,,,
+3,Advanced Courses,,,,,,,
+4,Major Elective Courses,,,,,,,
+5,Capstone,,,,,,,

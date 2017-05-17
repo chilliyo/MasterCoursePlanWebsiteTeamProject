@@ -50,11 +50,15 @@ Update: Added Fall,Winter,Spring collumn to CS major table, see DePaul_Master_Co
 @chilliyo:
 Update: Updated the code for IS major including total of five table for five concentration of IS major. See files:
     IS_crawler.py
-    IS_Business_Intelligence.csv
-    IS_Business_Systems_Analysis.csv
-    IS_Database_Administration.csv
-    IS_IT_Enterprise_Management.csv
-    IS_Standard.csv
+
+@chilliyo:
+Updated: Added 5 Tables(csv files) for each IS concentration,see files:
+IS_Business_Intelligence.csv
+IS_Business_Systems_Analysis.csv
+IS_Database_Administration.csv
+IS_IT_Enterprise_Management.csv
+IS_Standard.csv
+
     
 
 --------------------------------------------------END of Web Cralwer------------------------------------------

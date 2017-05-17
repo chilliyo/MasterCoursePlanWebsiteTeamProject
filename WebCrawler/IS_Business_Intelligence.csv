@@ -1,0 +1,34 @@
+COURSE_NUMBER,COURSE_NAME,PREREQUISITE,CLASS_TYPE,FALL,WINTER,SPRING,SUMMER,ONLINE
+IT411,Scripting for Interactive Systems,None,1,1,1,1,0,1
+IT403,Statistics and Data Analysis,None,1,1,1,1,1,1
+IS421,Systems Analysis,None,2,1,1,1,1,1
+CSC451,Database Design,None,2,1,1,1,1,1
+IS422,"System Design, Implementation, and Maintenance",IS 421 and CSC 451,2,1,1,1,1,1
+IS430,Fundamentals of IT Project Management,None,2,1,1,1,1,1
+IS574,Business Intelligence,(SE 430 or IS 435 or PM 430 or  MIS 674) and CS C451,3,1,1,1,0,1
+CSC423,Data Analysis and Regression,IT 403,3,1,1,1,1,1
+IS467,Fundamentals of Data Science,IT 403 or CSC 423,3,1,1,1,0,1
+IS549,Data Warehousing,,3,1,1,0,0,1
+CSC424,Advanced Data Analysis,CSC 423 or consent of instructor.,4,1,1,1,1,1
+CSC495,Social Network Analysis,CSC 423 or SOC 412,4,1,0,1,0,1
+CSC575,Intelligent Information Retrieval,CSC 403,4,0,1,0,0,1
+ECT584,Web Data Mining,IT 403 AND (CSC 451 or CSC 453 or CSC 455),4,1,0,1,1,1
+GEO441,Geographic Information Systems (Gis) for Community Development,,4,1,1,1,1,1
+HCI512,Information Visualization and Infographics,IT 403 and HCI 470,4,1,1,0,0,1
+IPD451,Big Data and NoSQL Program,,4,1,1,1,0,1
+IS452,Big Data and the Internet of Things (Iot),None,4,1,0,1,0,1
+IS456,Knowledge Management Systems,None,4,0,0,0,0,0
+IS536,Enterprise Cloud Computing,,4,1,1,1,0,1
+IS550,Enterprise Data Management,CSC 451 or CSC 453 or CSC 455,4,1,0,0,0,1
+IS577,Information Systems Policies and Strategies,Completion of ten or more SoC MS level courses is required.,5,0,1,0,1,1
+,,,,,,,,
+Students must complete 1 CDM Open Elective Course chosen from either IS concentration courses from any IS concentration or other courses meeting the following rules:,,,,,,,,
+"Any CNS, CSC, ECT, GAM, GPH, HCI, HIT, IS, IT, PM, SE, or TDC course in the 421-699 range qualifies.",,,,,,,,
+Credit for courses taken outside of CDM will only be given if approved by a faculty advisor.,,,,,,,,
+,,,,,,,,
+Class Type For IS,,,,,,,,
+1,Inrto,,,,,,,
+2,Fundation,,,,,,,
+3,Advanced Courses,,,,,,,
+4,Major Elective Courses,,,,,,,
+5,Capstone,,,,,,,

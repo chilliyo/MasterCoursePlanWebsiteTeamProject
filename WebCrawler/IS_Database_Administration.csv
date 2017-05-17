@@ -1,0 +1,29 @@
+COURSE_NUMBER,COURSE_NAME,PREREQUISITE,CLASS_TYPE,FALL,WINTER,SPRING,SUMMER,ONLINE
+IT411,Scripting for Interactive Systems,None,1,1,1,1,0,1
+IS421,Systems Analysis,None,2,1,1,1,1,1
+CSC451,Database Design,None,2,1,1,1,1,1
+IS422,"System Design, Implementation, and Maintenance",IS 421 and CSC 451,2,1,1,1,1,1
+IS430,Fundamentals of IT Project Management,None,2,1,1,1,1,1
+IS549,Data Warehousing,,3,1,1,0,0,1
+CSC454,Database Administration and Management,CSC 451 or CSC 453 or CSC 455,3,0,1,1,1,1
+CSC452,Database Programming,(CSC 453 or CSC 451 or CSC 455) and (CSC 401 or IT 411),3,1,1,1,1,1
+CSC554,Advanced Database Management,,3,0,1,1,0,1
+CNS440,Information Security Management,None,4,1,1,1,0,1
+IPD451,Big Data and NoSQL Program,,4,1,1,1,0,1
+IS452,Big Data and the Internet of Things (Iot),None,4,1,0,1,0,1
+IS505,Business Continuity/Disaster Recovery Theories and Strategies,,4,1,1,1,1,1
+IS536,Enterprise Cloud Computing,,4,1,1,1,0,1
+IS550,Enterprise Data Management,CSC 451 or CSC 453 or CSC 455,4,1,0,0,0,1
+IS577,Information Systems Policies and Strategies,Completion of ten or more SoC MS level courses is required.,5,0,1,0,1,1
+,,,,,,,,
+CDM Open Elective Courses,,,,,,,,
+Students must completeæ1æCDM Open Elective Course chosen from either IS concentration courses from any IS concentration or other courses meeting the following rules:,,,,,,,,
+"AnyæCNS, CSC, ECT, GAM, GPH, HCI, HIT, IS, IT, PM, SE, or TDCæcourse in the 421-699 range qualifies.",,,,,,,,
+Credit for courses taken outside of CDM will only be given if approved by a faculty advisor.,,,,,,,,
+,,,,,,,,
+Class Type For IS,,,,,,,,
+1,Inrto,,,,,,,
+2,Fundation,,,,,,,
+3,Advanced Courses,,,,,,,
+4,Major Elective Courses,,,,,,,
+5,Capstone,,,,,,,
