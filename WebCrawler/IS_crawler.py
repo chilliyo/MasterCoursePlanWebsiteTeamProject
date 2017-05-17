@@ -1,37 +1,59 @@
 '''
 Author: Qili Sui
 Master Course Plan Website Team Project
-Computer Science Major Table
+Information Sysytem Major Table
 '''
-
 import csv
 import urllib
 from bs4 import BeautifulSoup
-import pandas as pd
 import re
-import string
 
-PREFIX = 'http://www.cdm.depaul.edu/academics/pages/courseinfo.aspx?'
 SUBJECT = ''
 COURSE_NUMBER = ''
 
-def get_class(url = "http://www.cdm.depaul.edu/academics/Pages/Current/Requirements-MS-in-Computer-Science.aspx"):
-    global SUBJECT
-    global COURSE_NUMBER
-    COURSE_URL = ''
+#IS Concentration:
+Prefix = "https://www.cdm.depaul.edu/academics/Pages/Current/Requirements-MS-IS-"
+PREFIX = 'http://www.cdm.depaul.edu/academics/pages/courseinfo.aspx?'
+
+table_name = ["IS_Business_Systems_Analysis.csv","IS_Business_Intelligence.csv","IS_Database_Administration.csv","IS_IT_Enterprise_Management.csv","IS_Standard.csv" ]
+concentrations_lst = []
+#1. Business Analysis/Systems Analysis
+URL1 = Prefix + "Business-Systems-Analysis.aspx"
+concentrations_lst.append(URL1)
+#table_name1 = "IS_Business_Systems_Analysis.csv"
+
+#2. Business-Intelligence
+URL2 = Prefix + "Business-Intelligence.aspx"
+concentrations_lst.append(URL2)
+#table_name2 = "IS_Business_Intelligence.csv"
+
+#3. DatabaseAdministration
+URL3 = Prefix + "Database-Administration.aspx"
+concentrations_lst.append(URL3)
+#table_name3 = "IS_Database_Administration.csv"
+
+#4. IT Enterprise Management
+URL4 = Prefix + "IT-Enterprise-Management.aspx"
+concentrations_lst.append(URL4)
+#table_name4 = "IS_IT_Enterprise_Management.csv"
+
+#5. Standard
+URL5 = Prefix + "Standard.aspx"
+concentrations_lst.append(URL5)
+table_name5 = "IS_Standard.csv"
+
+def get_class_each_concentration(url):
     html = urllib.urlopen(url).read()
-    soup = BeautifulSoup(html, "lxml")
-
-    #print html
-
-    #class_name = re.compile("CDMExtendedCourseInfo...*")
+    soup = BeautifulSoup(html,"lxml")
 
     courseCode_html = soup.findAll('td', {'class': "CDMExtendedCourseInfo"})
-
+    #print courseCode_html
     courseCode = []
     courseURLs = []
+
     for course in courseCode_html:
         courseCode.append(course.text)
+        #print courseCode
 
     for course in courseCode_html:
         course_code_split = course.text.split()
@@ -39,7 +61,7 @@ def get_class(url = "http://www.cdm.depaul.edu/academics/Pages/Current/Requireme
         COURSE_NUMBER = course_code_split[1]
         COURSE_URL  = PREFIX + 'Subject=' + SUBJECT + '&CatalogNbr='+ COURSE_NUMBER
         courseURLs.append(COURSE_URL)
-
+        #print courseURLs
     return courseURLs
 
 def get_course_detail_page(courseURLs):
@@ -124,17 +146,19 @@ def get_course_detail_page(courseURLs):
         stripped_course_rows.append(stripped_course_row)
     return stripped_course_rows
 
-
-def write_table(course_row):
+def write_table(course_row,table_name):
     print("Writing Data to csv table...")
     colums = ['COURSE_NUMBER','COURSE_NAME','PREREQUISITE','CLASS_TYPE', 'FALL','WINTER','SPRING','SUMMER', 'ONLINE']
-    with open('DePaul_Master_ComputerScience_Standard.csv', 'w') as myfile:
+    with open(table_name, 'w') as myfile:
         writer = csv.writer(myfile)
         writer.writerow(colums)
         for row in course_row:
             writer.writerow(row)
-
     print("CSV file are ready.")
-#write_table(get_class())
-write_table(get_course_detail_page(get_class()))
-#get_course_detail_page(get_class())
+
+def concentrations(concentration_lst):
+    for i in range(len(concentration_lst)):
+        file_name = table_name[i]
+        write_table(get_course_detail_page(get_class_each_concentration(concentration_lst[i])),file_name)
+
+concentrations(concentrations_lst)

@@ -46,6 +46,16 @@ Fixed: Added Space Bwtween Course Name
 Update: Added Fall,Winter,Spring collumn to CS major table, see DePaul_Master_ComputerScience_Standard.csv, DePaul_Master_ComputerScience_Standard_manuallyAddClassType.csv,
     crawler.py
 
+**Commits on May 17,2017**
+@chilliyo:
+Update: Updated the code for IS major including total of five table for five concentration of IS major. See files:
+    IS_crawler.py
+    IS_Business_Intelligence.csv
+    IS_Business_Systems_Analysis.csv
+    IS_Database_Administration.csv
+    IS_IT_Enterprise_Management.csv
+    IS_Standard.csv
+    
 
 --------------------------------------------------END of Web Cralwer------------------------------------------
 
