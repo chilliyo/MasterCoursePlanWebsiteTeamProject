@@ -67,14 +67,26 @@ def get_course_detail_page(courseURLs):
 
         #check if the class was offered in summer session
         if_offers_summer = 0
+        if_offers_fall = 0
+        if_offers_winter = 0
+        if_offers_spring = 0
         offered_quarters = soup.findAll('p', {'class':'CTIPageSectionHeader'})
         for quarter in offered_quarters:
             #print quarter.text[0:5]
             #print (quarter.text[0:5] == 'Summe')
             if quarter.text[0:6] == 'Summer':
                 if_offers_summer = 1
-                break
                 #print if_offers_summer
+            if quarter.text[0:4] == 'Fall':
+                if_offers_fall = 1
+                #print ("fall: "+str(if_offers_fall))
+            if quarter.text[0:6] == 'Winter':
+                if_offers_winter = 1
+                #print ("winter: " + str(if_offers_winter))
+            if quarter.text[0:6] == 'Spring':
+                if_offers_spring = 1
+                #print ("spring: "+str(if_offers_spring))
+
 
         #check if the class was offered online
         class_location_list = []
@@ -101,6 +113,9 @@ def get_course_detail_page(courseURLs):
 
         stripped_course_row.append(PREREQUISITE_classes)
         stripped_course_row.append('N/A')
+        stripped_course_row.append(if_offers_fall)
+        stripped_course_row.append(if_offers_winter)
+        stripped_course_row.append(if_offers_spring)
         stripped_course_row.append(if_offers_summer)
         stripped_course_row.append(if_offers_online)
         #print (stripped_course_row)
@@ -110,7 +125,7 @@ def get_course_detail_page(courseURLs):
 
 def write_table(course_row):
     print("Writing Data to csv table...")
-    colums = ['COURSE_NUMBER','COURSE_NAME','PREREQUISITE','CLASS_TYPE', 'SUMMER', 'ONLINE']
+    colums = ['COURSE_NUMBER','COURSE_NAME','PREREQUISITE','CLASS_TYPE', 'FALL','WINTER','SPRING','SUMMER', 'ONLINE']
     with open('DePaul_Master_ComputerScience_Standard.csv', 'w') as myfile:
         writer = csv.writer(myfile)
         writer.writerow(colums)
