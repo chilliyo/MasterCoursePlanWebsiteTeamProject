@@ -59,6 +59,10 @@ IS_Database_Administration.csv
 IS_IT_Enterprise_Management.csv
 IS_Standard.csv
 
+**Commits on May 18,2017**
+@chilliyo:
+Update: added import_script.py for looping through all csv table(missing the path for csv file now)"
+
     
 
 --------------------------------------------------END of Web Cralwer------------------------------------------
