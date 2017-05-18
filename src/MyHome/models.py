@@ -1,5 +1,5 @@
 from django.db import models
-from django.contrib.auth.models import AbstractBaseUser, PremissionsMixin
+from django.contrib.auth.models import AbstractBaseUser, PermissionsMixin
 
 
 # Create your models here.
@@ -19,8 +19,7 @@ class User(AbstractBaseUser, PermissionsMixin):
 
     username = models.CharField(max_length=50)
     email = models.EmailField(unique=True)
-    is_faculty = models.BoleanField(default=False)
-
+    is_faculty = models.BooleanField(default=False)
     current_credits = models.IntegerField(default=0)
 
     classes_per_quarter = models.IntegerField(default=0)
@@ -40,7 +39,7 @@ class User(AbstractBaseUser, PermissionsMixin):
     def get_email(self):
         return self.email
 
-
+#NameError: name 'BaseUserManager' is not defined - Qili
 class UserManager(BaseUserManager):
 
     def create_user(self, email, password, major, concentration, **kwargs):
