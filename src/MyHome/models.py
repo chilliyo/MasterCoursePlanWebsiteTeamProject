@@ -1,6 +1,8 @@
 from django.db import models
-from django.contrib.auth.models import AbstractBaseUser, PermissionsMixin
-
+from django.contrib.auth.models import User
+from django.conf import settings
+from django.utils.translation import ugettext_lazy as _
+from . import managers
 
 # Create your models here.
 class SignUp(models.Model):
@@ -13,14 +15,15 @@ class SignUp(models.Model):
         return self.email
 
 
-class User(AbstractBaseUser, PermissionsMixin):
-    student_number = models.CharField(max_length=30, primary_key=True)
-    student_name = models.CharField(max_length=30, primary_key=True)
 
-    username = models.CharField(max_length=50)
-    email = models.EmailField(unique=True)
-    is_faculty = models.BooleanField(default=False)
-    current_credits = models.IntegerField(default=0)
+
+
+class asdf(models.Model):
+
+    student_number = models.CharField(max_length=100, primary_key=True)
+    student_name = models.CharField(max_length=50)
+
+    current_credits = models.IntegerField()
 
     classes_per_quarter = models.IntegerField(default=0)
 
@@ -33,52 +36,61 @@ class User(AbstractBaseUser, PermissionsMixin):
 
     class_list = models.CharField(max_length=1000, default="")
 
-    def get_student_name(self):
-        return self.student_name
+class Profile(models.Model):
+    #relations
+    user = models.OneToOneField(settings.AUTH_USER_MODEL,
+                                related_name="profile",
+                                verbose_name=_("user")
+                                )
+    ##attributes
 
-    def get_email(self):
-        return self.email
+    student_name = models.CharField(max_length=50,
+                                    verbose_name=_("student_name")
+                                    )
+    student_number = models.CharField(max_length=100,
+                                      primary_key=True,
+                                      verbose_name=_("student_number")
+                                    )
 
-##NameError: name 'BaseUserManager' is not defined - Qili
-#class UserManager(BaseUserManager):
-#
-#    def create_user(self, email, password, major, concentration, **kwargs):
-#        user = self.model(
-#            email=self.normalize_email(email),
-#            major = self.major,
-#            concentration = self.concentration,
-#            **kwargs
-#            )
-#        user.set_password(password)
-#        user.save(using=self._db)
-#        return user
+    current_credits = models.IntegerField(default=0,
+                                          verbose_name=_("current_credits")
+                                          )
 
+    classes_per_quarter = models.IntegerField(default=0,
+                                              verbose_name=_("classes_per_quarter")
+                                              )
 
+    #faculty_name = models.ForeignKey('Faculty', default="")
 
-class Faculty(models.Model):
-    faculty_name = models.CharField(max_length=50, primary_key=True)
-    username = models.CharField(max_length=50)
-    password = models.CharField(max_length=50)
+    major = models.CharField(max_length=50,
+                             verbose_name=_("major")
+                             )
+    concentration = models.CharField(max_length=4,
+                                     verbose_name=_("concentration")
+                                     )
+    summer = models.BooleanField(default=False,
+                                 verbose_name=_("summer")
+                                 )
+    online = models.BooleanField(default=False,
+                                 verbose_name=_("online")
+                                 )
 
+    class_list = models.CharField(max_length=1000,
+                                  default="",
+                                  verbose_name=_("class_list")
+                                  )
 
-class Classes(models.Model):
-    class_number = models.CharField(max_length=50, primary_key=True)
-    class_name = models.CharField(max_length=50, primary_key=True)
+    objects = managers.ProfileManager()
 
-    Professor = models.CharField(max_length=50)
+    @property
+    def username(self):
+        return self.user.username
 
-    pre_req = models.CharField(max_length= 1000)
-    class_type = models.CharField(max_length=100)
-    time = models.DateField()
-    summer = models.BooleanField(default=False)
-    spring = models.BooleanField(default=False)
-    fall = models.BooleanField(default=False)
-    winter = models.BooleanField(default=False)
+    class Meta:
+        verbose_name = _("Profile")
+        verbose_name_plural = _("Profiles")
+        ordering = ("user",)
 
-    online = models.BooleanField(default=False)
-    start_date = models.DateField()
-    end_date = models.DateField()
-    DOW = models.CharField(max_length=50)
-    DOW2 = models.CharField(max_length=50)
-    location = models.CharField(max_length=50, primary_key=True)
-    room = models.CharField(max_length=50, primary_key=True)
+    def __str__(self):
+        return self.user.username
+
