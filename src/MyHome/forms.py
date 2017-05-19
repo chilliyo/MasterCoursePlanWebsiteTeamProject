@@ -19,4 +19,4 @@ class SignUpForm(forms.ModelForm):
         full_name = self.cleaned_data.get('full_name')
         return full_name
 
-
+# Added a comment
