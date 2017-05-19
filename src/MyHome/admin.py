@@ -24,3 +24,21 @@ class ProfileAdmin(admin.ModelAdmin):
                     "class_list")
 
     search_fields = ["user__username"]
+
+@admin.register(models.Classes)
+class ClassesAdmin(admin.ModelAdmin):
+    list_display = ("class_number",
+                    "class_name",
+                    "Professor",
+                    "pre_req",
+                    "class_type",
+                    "time",
+                    "summer",
+                    "spring",
+                    "fall",
+                    "winter",
+                    "online",
+                    "start_date",
+                    "end_date",
+                    "location",
+                    "room")

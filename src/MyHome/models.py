@@ -14,28 +14,6 @@ class SignUp(models.Model):
     def __str__(self):  # Python 3.3 is __str__ and lower version is __unicode__
         return self.email
 
-
-
-
-
-class asdf(models.Model):
-
-    student_number = models.CharField(max_length=100, primary_key=True)
-    student_name = models.CharField(max_length=50)
-
-    current_credits = models.IntegerField()
-
-    classes_per_quarter = models.IntegerField(default=0)
-
-    #faculty_name = models.ForeignKey('Faculty', default="")
-
-    major = models.CharField(max_length=50)
-    concentration = models.CharField(max_length=4)
-    summer = models.BooleanField(default=False)
-    online = models.BooleanField(default=False)
-
-    class_list = models.CharField(max_length=1000, default="")
-
 class Profile(models.Model):
     #relations
     user = models.OneToOneField(settings.AUTH_USER_MODEL,
@@ -93,4 +71,25 @@ class Profile(models.Model):
 
     def __str__(self):
         return self.user.username
+
+class Classes(models.Model):
+    class_number = models.CharField(max_length=50, primary_key=True)
+    class_name = models.CharField(max_length=50)
+
+    Professor = models.CharField(max_length=50)
+
+    pre_req = models.CharField(max_length= 1000)
+    class_type = models.CharField(max_length=100)
+    time = models.DateField()
+    summer = models.BooleanField(default=False)
+    spring = models.BooleanField(default=False)
+    fall = models.BooleanField(default=False)
+    winter = models.BooleanField(default=False)
+
+    online = models.BooleanField(default=False)
+    start_date = models.DateField()
+    end_date = models.DateField()
+
+    location = models.CharField(max_length=50)
+    room = models.CharField(max_length=50)
 
