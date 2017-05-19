@@ -1,0 +1,16 @@
+CDM Open Electives Courses For All IS Master Students
+Students must complete CDM Open Elective Course chosen from either IS concentration courses from any IS concentration or other courses meeting the following rules:		
+Any CNS, CSC, ECT, GAM, GPH, HCI, HIT, IS, IT, PM, SE, or TDCÊcourse in the 421-699 range qualifies.								
+Credit for courses taken outside of CDM will only be given if approved by a faculty advisor.	
+
+Major Electives Courses for IS Standard concentration
+Students must take or courses as Major Electives. All Major Elective Courses must be graduate level courses in the range of 421-699. Three courses must be in the 500-level range.								
+
+							
+								
+Class Type For IS								
+1	Inrto							
+2	Fundation							
+3	Advanced Courses							
+4	Major Elective Courses							
+5	Capstone							

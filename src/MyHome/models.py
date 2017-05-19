@@ -39,19 +39,19 @@ class User(AbstractBaseUser, PermissionsMixin):
     def get_email(self):
         return self.email
 
-#NameError: name 'BaseUserManager' is not defined - Qili
-class UserManager(BaseUserManager):
-
-    def create_user(self, email, password, major, concentration, **kwargs):
-        user = self.model(
-            email=self.normalize_email(email),
-            major = self.major,
-            concentration = self.concentration,
-            **kwargs
-            )
-        user.set_password(password)
-        user.save(using=self._db)
-        return user
+##NameError: name 'BaseUserManager' is not defined - Qili
+#class UserManager(BaseUserManager):
+#
+#    def create_user(self, email, password, major, concentration, **kwargs):
+#        user = self.model(
+#            email=self.normalize_email(email),
+#            major = self.major,
+#            concentration = self.concentration,
+#            **kwargs
+#            )
+#        user.set_password(password)
+#        user.save(using=self._db)
+#        return user
 
 
 
