@@ -34,7 +34,7 @@ for csv_file in csv_filepathname:
 				classes.spring = row[6]
 				classes.summer = row[7]
 				classes.online = row[8]
-				zipcode.save()
+				classes.save()
 
 
 '''
