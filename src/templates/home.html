@@ -16,6 +16,21 @@
 {% block content %}
 {% if request.user.is_authenticated %}
 <h1>You are logged in</h1>
+
+
+<div class='row'>
+    <div class='col-sm-5 col-sm-offset-6'>
+<form method='POST' action=''>{% csrf_token %}
+    {{form|crispy}}
+    <input class='btn btn-default' type='Submit' value='Run When-If Report'/>
+</form>
+    </div>
+</div>
+
+
+
+
+
     {% if queryset %}
     <h2>Welcome Admin</h2>
     <table class='table'>
@@ -27,7 +42,9 @@
 
 {% else %}
 <div class="row">
-  <div class="col-xs-3 pull-right">
+
+
+    <div class="col-xs-3 pull-right">
 
         <h1>{{ title }}</h1>
       <h5>Please sign up to receive newsletters.</h5>
@@ -37,6 +54,7 @@
         <input class='btn btn-primary' type='Submit' value='Sign Up'/>
     </form>
   </div>
+
 
     <div class='col-xs-3'>
         <p><b>MS in Computer Science</b></p>

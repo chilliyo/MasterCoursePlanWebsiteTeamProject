@@ -6,13 +6,26 @@ from . import managers
 
 # Create your models here.
 class SignUp(models.Model):
+    #email = models.EmailField()
+    #full_name = models.CharField(max_length=120, blank=True, null=True)
+    #timestamp = models.DateTimeField(auto_now_add=True, auto_now=False)
+    #updated = models.DateTimeField(auto_now_add=False, auto_now=True)
     email = models.EmailField()
-    full_name = models.CharField(max_length=120, blank=True, null=True)
+    First_Name = models.CharField(max_length=120, blank=True, null=True)
+    Last_Name = models.CharField(max_length=120, blank=True, null=True)
+    Current_Credits = models.CharField(max_length=120, blank=True, null=True)
+    Classes_Per_Quarter = models.CharField(max_length=120, blank=True, null=True)
+    Major = models.CharField(max_length=120, blank=True, null=True)
+    Concentration = models.CharField(max_length=120, blank=True, null=True)
+    summer = models.BooleanField(default=False)
+    online = models.BooleanField(default=False)
+
     timestamp = models.DateTimeField(auto_now_add=True, auto_now=False)
     updated = models.DateTimeField(auto_now_add=False, auto_now=True)
 
     def __str__(self):  # Python 3.3 is __str__ and lower version is __unicode__
         return self.email
+
 
 class Profile(models.Model):
     #relations
