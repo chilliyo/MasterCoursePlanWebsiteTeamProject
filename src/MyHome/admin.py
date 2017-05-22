@@ -4,7 +4,7 @@ from .forms import SignUpForm
 from . import models
 
 class SignUpAdmin(admin.ModelAdmin):
-    list_display = ["__str__", "timestamp", "updated"]  # Things we want to display on admin database list
+    list_display = ["First_Name", "Last_Name", "Major", "Concentration", "Classes_Per_Quarter", "Current_Credits", "__str__", "timestamp", "updated"]  # Things we want to display on admin database list
     form = SignUpForm
     #class Meta:
         #model = SignUp

@@ -16,45 +16,39 @@
 {% block content %}
 {% if request.user.is_authenticated %}
 <h1>You are logged in</h1>
-
-
 <div class='row'>
     <div class='col-sm-5 col-sm-offset-6'>
 <form method='POST' action=''>{% csrf_token %}
-    {{form|crispy}}
+    {{ form|crispy }}
     <input class='btn btn-default' type='Submit' value='Run When-If Report'/>
 </form>
     </div>
 </div>
 
-
-
-
-
     {% if queryset %}
     <h2>Welcome Admin</h2>
     <table class='table'>
+        <tr>
+            <th>Count</th>
+            <th>First Name</th>
+            <th>Last Name</th>
+            <th>Email</th>
+            <th>Major</th>
+            <th>Concentration</th>
+            <th>Classes Per Quarter</th>
+            <th>Current Credits</th>
+            <th>Summer</th>
+            <th>Online</th>
+        </tr>
     {% for instance in queryset %}
-        <tr><td>{{ forloop.counter }}</td><td>{{ instance.full_name }}</td><td>{{ instance }}</td><td>{{ instance.timestamp|timesince}} ago</td></tr>
+        <tr><td>{{ forloop.counter }}</td><td>{{ instance.First_Name }} </td><td>{{ instance.Last_Name }} </td><td>{{ instance.email }} </td><td>{{ instance.Major }}</td><td>{{ instance.Concentration }} </td><td>{{ instance.Classes_Per_Quarter }} </td><td>{{ instance.Current_Credits }} </td><td>{{ instance.summer }} </td><td>{{ instance.online }} </td></tr>
+
     {% endfor %}
     </table>
     {% endif %}
 
 {% else %}
 <div class="row">
-
-<!-- Comment GP
-    <div class="col-xs-3 pull-right">
-
-        <h1>{{ title }}</h1>
-      <h5>Please sign up to receive newsletters.</h5>
-
-        <form method='POST' action=''>{% csrf_token %}
-        {{form|crispy}}
-        <input class='btn btn-primary' type='Submit' value='Sign Up'/>
-    </form>
-  </div>
-End Comment GP-->
 
     <div class='col-xs-3 col-sm-offset-3'>
         <p><b>MS in Computer Science</b></p>
