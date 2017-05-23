@@ -11,12 +11,12 @@ class SignUp(models.Model):
     #timestamp = models.DateTimeField(auto_now_add=True, auto_now=False)
     #updated = models.DateTimeField(auto_now_add=False, auto_now=True)
     email = models.EmailField()
-    First_Name = models.CharField(max_length=120, blank=True, null=True)
-    Last_Name = models.CharField(max_length=120, blank=True, null=True)
-    Current_Credits = models.CharField(max_length=120, blank=True, null=True)
-    Classes_Per_Quarter = models.CharField(max_length=120, blank=True, null=True)
-    Major = models.CharField(max_length=120, blank=True, null=True)
-    Concentration = models.CharField(max_length=120, blank=True, null=True)
+    First_Name = models.CharField(max_length=120, blank=False, null=True)
+    Last_Name = models.CharField(max_length=120, blank=False, null=True)
+    Current_Credits = models.CharField(max_length=120, blank=False, null=True)
+    Classes_Per_Quarter = models.CharField(max_length=120, blank=False, null=True)
+    Major = models.CharField(max_length=120, blank=False, null=True)
+    Concentration = models.CharField(max_length=120, blank=False, null=True)
     summer = models.BooleanField(default=False)
     online = models.BooleanField(default=False)
 
@@ -88,21 +88,16 @@ class Profile(models.Model):
 class Classes(models.Model):
     class_number = models.CharField(max_length=50, primary_key=True)
     class_name = models.CharField(max_length=50)
-
     Professor = models.CharField(max_length=50)
-
     pre_req = models.CharField(max_length= 1000)
     class_type = models.CharField(max_length=100)
-    time = models.DateField()
+    time = models.TimeField()
     summer = models.BooleanField(default=False)
     spring = models.BooleanField(default=False)
     fall = models.BooleanField(default=False)
     winter = models.BooleanField(default=False)
-
     online = models.BooleanField(default=False)
     start_date = models.DateField()
     end_date = models.DateField()
-
     location = models.CharField(max_length=50)
     room = models.CharField(max_length=50)
-
