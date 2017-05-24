@@ -46,7 +46,6 @@
     {% endfor %}
     </table>
     {% endif %}
-
 {% else %}
 <div class="row">
 
@@ -69,4 +68,51 @@
     <h5><p><center>Designed and built by Team 3 Copyright &copy; 2017-2020</center></p></h5>
 </div>
 {% endif %}
+<div class = "row">
+<br><br><br><br><br>
+    {% if studentset %}
+    {% for instance in studentset %}
+    {% if forloop.counter < 2 %}
+    <table>
+        <tr>
+            <td>First Name:&nbsp;&nbsp;</td>
+            <td>{{ instance.First_Name }}</td>
+        </tr>
+        <tr>
+            <td>Last Name:&nbsp;&nbsp;</td>
+            <td>{{ instance.Last_Name }}</td>
+        </tr>
+        <tr>
+            <td>Email:&nbsp;&nbsp;</td>
+            <td>{{ instance.email }}</td>
+        </tr>
+        <tr>
+            <td>Major:&nbsp;&nbsp;</td>
+            <td>{{ instance.Major }}</td>
+        </tr>
+        <tr>
+            <td>Consentration:&nbsp;&nbsp;</td>
+            <td>{{ instance.Concentration }}</td>
+        </tr>
+        <tr>
+            <td>Classes Per Quarter:&nbsp;&nbsp;</td>
+            <td>{{ instance.Classes_Per_Quarter }}</td>
+        </tr>
+        <tr>
+            <td>Current Credits:&nbsp;&nbsp;</td>
+            <td>{{ instance.Current_Credits }}</td>
+        </tr>
+        <tr>
+            <td>Summer Classes?&nbsp;&nbsp;</td>
+            <td>{{ instance.summer }}</td>
+        </tr>
+        <tr>
+            <td>Online Classes?&nbsp;&nbsp;</td>
+            <td>{{ instance.online }}</td>
+        </tr>
+    </table>
+    {% endif %}
+    {% endfor %}
+    {% endif %}
+</div>
 {% endblock %}
