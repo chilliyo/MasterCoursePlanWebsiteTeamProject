@@ -17,24 +17,24 @@ import django
 
 django.setup()
 
-from MyHome.models import Classes
+from MyHome.models import cs_Classes
 
 for csv_file in csv_filepathname:
 	data = csv.reader(open(csv_file), delimiter=',', quotechar='"') 
 		for row in data:
 			if row[0] != 'COURSE_NUMBER':
 			# Ignore the header row, import everything else
-				classes = Classes()
-				classes.class_number = row[0]
-				classes.class_name = row[1]
-				classes.pre_req = row[2]
-				classes.class_type = row[3]
-				classes.fall = row[4]
-				classes.winter = row[5]
-				classes.spring = row[6]
-				classes.summer = row[7]
-				classes.online = row[8]
-				classes.save()
+				cs_Classes = cs_Classes()
+				cs_Classes.class_number = row[0]
+				cs_Classes.class_name = row[1]
+				cs_Classes.pre_req = row[2]
+				cs_Classes.class_type = row[3]
+				cs_Classes.fall = row[4]
+				cs_Classes.winter = row[5]
+				cs_Classes.spring = row[6]
+				cs_Classes.summer = row[7]
+				cs_Classes.online = row[8]
+				cs_Classes.save()
 
 
 '''
