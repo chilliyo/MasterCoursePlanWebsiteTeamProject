@@ -25,20 +25,27 @@ class ProfileAdmin(admin.ModelAdmin):
 
     search_fields = ["user__username"]
 
-@admin.register(models.Classes)
-class ClassesAdmin(admin.ModelAdmin):
+@admin.register(models.cs_Classes)
+class cs_ClassesAdmin(admin.ModelAdmin):
     list_display = ("class_number",
                     "class_name",
-                    "Professor",
                     "pre_req",
                     "class_type",
-                    "time",
                     "summer",
                     "spring",
                     "fall",
                     "winter",
-                    "online",
-                    "start_date",
-                    "end_date",
-                    "location",
-                    "room")
+                    "online")
+
+
+@admin.register(models.is_Classes)
+class is_ClassesAdmin(admin.ModelAdmin):
+    list_display = ("class_number",
+                    "class_name",
+                    "pre_req",
+                    "class_type",
+                    "summer",
+                    "spring",
+                    "fall",
+                    "winter",
+                    "online")
