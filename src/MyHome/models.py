@@ -2,6 +2,7 @@ from django.db import models
 from django.contrib.auth.models import User
 from django.conf import settings
 from django.utils.translation import ugettext_lazy as _
+from django.core.validators import MaxValueValidator, MinValueValidator
 from . import managers
 
 # Create your models here.
@@ -48,7 +49,8 @@ class Profile(models.Model):
                                           )
 
     classes_per_quarter = models.IntegerField(default=0,
-                                              verbose_name=_("classes_per_quarter")
+                                              verbose_name=_("classes_per_quarter"),
+                                              validators=[MaxValueValidator(3), MinValueValidator(1)]
                                               )
 
     #faculty_name = models.ForeignKey('Faculty', default="")
