@@ -41,7 +41,7 @@
             <th>Online</th>
         </tr>
     {% for instance in queryset %}
-        <tr><td>{{ forloop.counter }}</td><td>{{ instance.First_Name }} </td><td>{{ instance.Last_Name }} </td><td>{{ instance.email }} </td><td>{{ instance.Major }}</td><td>{{ instance.Concentration }} </td><td>{{ instance.Classes_Per_Quarter }} </td><td>{{ instance.Current_Credits }} </td><td>{{ instance.summer }} </td><td>{{ instance.online }} </td></tr>
+        <tr><td>{{ forloop.counter }}</td><td>{{ instance.First_Name }} </td><td>{{ instance.Last_Name }} </td><td>{{ instance.email }} </td><td>{{ instance.Major }}</td><td>{{ instance.Concentration }} </td><td>{{ instance.Classes_Per_Quarter }} </td><td>{{ instance.Current_Credits }} </td><td>{{ instance.Classes_Per_Quarter }} </td><td>{{ instance.summer }} </td><td>{{ instance.online }} </td></tr>
 
     {% endfor %}
     </table>
