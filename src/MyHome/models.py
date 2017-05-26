@@ -11,8 +11,8 @@ class SignUp(models.Model):
     First_Name = models.CharField(max_length=120, blank=False, null=True)
     Last_Name = models.CharField(max_length=120, blank=False, null=True)
     #Current_Credits = models.CharField(max_length=120, blank=False, null=True)
-    Classes_Per_Quarter = models.CharField(max_length=120, blank=False, null=True)
-    Major = models.CharField(max_length=120, blank=False, null=True)
+    Classes_Per_Quarter = models.CharField(max_length=120, blank=False, null=True, default = '1')
+    Major = models.CharField(max_length=120, blank=False, null=True, default = "Computer Science (Standard Concentration)")
     summer = models.BooleanField(default=False)
     online = models.BooleanField(default=False)
 
@@ -24,7 +24,7 @@ class SignUp(models.Model):
 
     ClassesPerQuarter = (('1 Class', '1 Class'), ('2 Classes', '2 Classes'), ('3 Classes', '3 Classes'),)
 
-    Classes_Per_Quarter = models.CharField(max_length=120, choices=ClassesPerQuarter)
+    Classes_Per_Quarter = models.CharField(max_length=120, choices=ClassesPerQuarter, default = '1')
 
     MyMajor = (('Computer Science (Standard Concentration)', 'Computer Science (Standard Concentration)'),
                ('Information Systems (Business Analysis/Systems Analysis)', 'Information Systems (Business Analysis/Systems Analysis)'),
@@ -32,11 +32,11 @@ class SignUp(models.Model):
                ('Information Systems (Database Administration Concentration)', 'Information Systems (Database Administration Concentration)'),
                ('Information Systems (IT Enterprise Management Concentration)', 'Information Systems (IT Enterprise Management Concentration)'),
                ('Information Systems (Standard Concentration)', 'Information Systems (Standard Concentration)'),)
-    Major = models.CharField(max_length=120, choices=MyMajor)
+    Major = models.CharField(max_length=120, choices=MyMajor, default = "Computer Science (Standard Concentration)")
 
     StartQuarter = (('Fall', 'Fall'), ('Winter', 'Winter'), ('Spring', 'Spring'),)
     #Current_Credits = models.CharField(max_length=120, choices=StartQuarter)
-    Start_Quarter = models.CharField(max_length=120, choices=StartQuarter)
+    Start_Quarter = models.CharField(max_length=120, choices=StartQuarter, default = 'Fall')
 
     def __str__(self):  # Python 3.3 is __str__ and lower version is __unicode__
         return self.email

@@ -20,6 +20,7 @@ EMAIL_USE_TLS = True
 # Application definition
 INSTALLED_APPS = (
     # Django Apps
+    'django_extensions',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',

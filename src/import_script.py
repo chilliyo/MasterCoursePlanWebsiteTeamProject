@@ -1,16 +1,16 @@
 '''
 Qili May 18th
 '''
-import csv,sys,os 
+import csv,sys,os
 
 # Full path and name to  csv file (total of 6 csv tables)
 is_Classes_csv_filepathname= []
 
-IS_Standard = "/Users/Chilli/Documents/DePaul_NEIU/DePaul/11_Spring 2016/CSC394_workspace/MasterCoursePlanWebsiteTeamProject/WebCrawler/IS_Standard.csv"
-IS_IT_Enterprise_Management = "/Users/Chilli/Documents/DePaul_NEIU/DePaul/11_Spring 2016/CSC394_workspace/MasterCoursePlanWebsiteTeamProject/WebCrawler/IS_IT_Enterprise_Management.csv"
-IS_Database_Administration = "/Users/Chilli/Documents/DePaul_NEIU/DePaul/11_Spring 2016/CSC394_workspace/MasterCoursePlanWebsiteTeamProject/WebCrawler/IS_Database_Administration.csv"
-IS_Business_Systems_Analysis = "/Users/Chilli/Documents/DePaul_NEIU/DePaul/11_Spring 2016/CSC394_workspace/MasterCoursePlanWebsiteTeamProject/WebCrawler/IS_Business_Systems_Analysis.csv"
-IS_Business_Intelligence = "/Users/Chilli/Documents/DePaul_NEIU/DePaul/11_Spring 2016/CSC394_workspace/MasterCoursePlanWebsiteTeamProject/WebCrawler/IS_Business_Intelligence.csv"
+IS_Standard = "/Users/miguelcarrazza/Desktop/MasterCoursePlanWebsiteTeamProject/WebCrawler/IS_Standard.csv"
+IS_IT_Enterprise_Management = "/Users/miguelcarrazza/Desktop/MasterCoursePlanWebsiteTeamProject/WebCrawler/IS_IT_Enterprise_Management.csv"
+IS_Database_Administration = "/Users/miguelcarrazza/Desktop/MasterCoursePlanWebsiteTeamProject/WebCrawler/IS_Database_Administration.csv"
+IS_Business_Systems_Analysis = "/Users/miguelcarrazza/Desktop/MasterCoursePlanWebsiteTeamProject/WebCrawler/IS_Business_Systems_Analysis.csv"
+IS_Business_Intelligence = "/Users/miguelcarrazza/Desktop/MasterCoursePlanWebsiteTeamProject/WebCrawler/IS_Business_Intelligence.csv"
 
 is_Classes_csv_filepathname.append(IS_Standard)
 is_Classes_csv_filepathname.append(IS_IT_Enterprise_Management)
@@ -18,9 +18,9 @@ is_Classes_csv_filepathname.append(IS_Database_Administration)
 is_Classes_csv_filepathname.append(IS_Business_Systems_Analysis)
 is_Classes_csv_filepathname.append(IS_Business_Intelligence)
 
-CS = "/Users/Chilli/Documents/DePaul_NEIU/DePaul/11_Spring 2016/CSC394_workspace/MasterCoursePlanWebsiteTeamProject/WebCrawler/DePaul_Master_ComputerScience_Standard_manuallyAddClassType.csv"
+CS = "/Users/miguelcarrazza/Desktop/MasterCoursePlanWebsiteTeamProject/WebCrawler/DePaul_Master_ComputerScience_Standard_manuallyAddClassType.csv"
 # Full path to django project directory
-djangoproject_home="/Users/Chilli/Documents/DePaul_NEIU/DePaul/11_Spring 2016/CSC394_workspace/MasterCoursePlanWebsiteTeamProject/src"
+djangoproject_home="/Users/miguelcarrazza/Desktop/MasterCoursePlanWebsiteTeamProject/src"
 
 sys.path.append(djangoproject_home)
 
