@@ -10,7 +10,7 @@ class SignUp(models.Model):
     email = models.EmailField()
     First_Name = models.CharField(max_length=120, blank=False, null=True)
     Last_Name = models.CharField(max_length=120, blank=False, null=True)
-    #Current_Credits = models.CharField(max_length=120, blank=False, null=True)
+    #Current_Credits = models.CharField(max_length=120, blank=False, null=True)''
     Classes_Per_Quarter = models.CharField(max_length=120, blank=False, null=True)
     Major = models.CharField(max_length=120, blank=False, null=True)
     summer = models.BooleanField(default=False)
@@ -21,9 +21,6 @@ class SignUp(models.Model):
 
 
     ClassesPerQuarter = (('1', '1'), ('2', '2'), ('3', '3'),)
-
-    ClassesPerQuarter = (('1 Class', '1 Class'), ('2 Classes', '2 Classes'), ('3 Classes', '3 Classes'),)
-
     Classes_Per_Quarter = models.CharField(max_length=120, choices=ClassesPerQuarter)
 
     MyMajor = (('Computer Science (Standard Concentration)', 'Computer Science (Standard Concentration)'),
@@ -35,7 +32,6 @@ class SignUp(models.Model):
     Major = models.CharField(max_length=120, choices=MyMajor)
 
     StartQuarter = (('Fall', 'Fall'), ('Winter', 'Winter'), ('Spring', 'Spring'),)
-    #Current_Credits = models.CharField(max_length=120, choices=StartQuarter)
     Start_Quarter = models.CharField(max_length=120, choices=StartQuarter)
 
     def __str__(self):  # Python 3.3 is __str__ and lower version is __unicode__
@@ -49,7 +45,8 @@ class Profile(models.Model):
 
     student_name = models.CharField(max_length=50, verbose_name=_("student_name"))
     student_number = models.CharField(max_length=100, primary_key=True, verbose_name=_("student_number"))
-    current_credits = models.IntegerField(default=0, verbose_name=_("current_credits"))
+    #current_credits = models.IntegerField(default=0, verbose_name=_("current_credits"))
+    Start_Quarter = models.CharField(max_length=100, default='', verbose_name=_("Start_Quarter"))
     classes_per_quarter = models.IntegerField(default=0, verbose_name=_("classes_per_quarter"), validators=[MaxValueValidator(3), MinValueValidator(1)])
     major = models.CharField(max_length=50, verbose_name=_("major"))
     summer = models.BooleanField(default=False, verbose_name=_("summer"))
