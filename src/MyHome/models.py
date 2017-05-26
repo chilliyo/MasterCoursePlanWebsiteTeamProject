@@ -10,22 +10,28 @@ class SignUp(models.Model):
     email = models.EmailField()
     First_Name = models.CharField(max_length=120, blank=False, null=True)
     Last_Name = models.CharField(max_length=120, blank=False, null=True)
-    Current_Credits = models.CharField(max_length=120, blank=False, null=True)
+    #Current_Credits = models.CharField(max_length=120, blank=False, null=True)
     Classes_Per_Quarter = models.CharField(max_length=120, blank=False, null=True)
     Major = models.CharField(max_length=120, blank=False, null=True)
-    Concentration = models.CharField(max_length=120, blank=False, null=True)
     summer = models.BooleanField(default=False)
     online = models.BooleanField(default=False)
 
     timestamp = models.DateTimeField(auto_now_add=True, auto_now=False)
     updated = models.DateTimeField(auto_now_add=False, auto_now=True)
 
-    ClassesPerQuarter = (
-        ('1', '1'),
-        ('2', '2'),
-        ('3', '3'),
-    )
-    Classes_Per_Quarter = models.CharField(max_length=6, choices=ClassesPerQuarter, default='1')
+    ClassesPerQuarter = (('1 Class', '1 Class'), ('2 Classes', '2 Classes'), ('3 Classes', '3 Classes'),)
+    Classes_Per_Quarter = models.CharField(max_length=120, choices=ClassesPerQuarter)
+
+    MyMajor = (('Computer Science (Standard Concentration)', 'Computer Science (Standard Concentration)'),
+               ('Information Systems (Business Analysis/Systems Analysis)', 'Information Systems (Business Analysis/Systems Analysis)'),
+               ('Information Systems (Business Intelligence Concentration)', 'Information Systems (Business Intelligence Concentration)'),
+               ('Information Systems (Database Administration Concentration)', 'Information Systems (Database Administration Concentration)'),
+               ('Information Systems (IT Enterprise Management Concentration)', 'Information Systems (IT Enterprise Management Concentration)'),
+               ('Information Systems (Standard Concentration)', 'Information Systems (Standard Concentration)'),)
+    Major = models.CharField(max_length=120, choices=MyMajor)
+
+    StartQuarter = (('Fall', 'Fall'), ('Winter', 'Winter'), ('Spring', 'Spring'),)
+    Current_Credits = models.CharField(max_length=120, choices=StartQuarter)
 
     def __str__(self):  # Python 3.3 is __str__ and lower version is __unicode__
         return self.email
@@ -33,49 +39,17 @@ class SignUp(models.Model):
 
 class Profile(models.Model):
     #relations
-    user = models.OneToOneField(settings.AUTH_USER_MODEL,
-                                related_name="profile",
-                                verbose_name=_("user")
-                                )
+    user = models.OneToOneField(settings.AUTH_USER_MODEL, related_name="profile", verbose_name=_("user"))
     ##attributes
 
-    student_name = models.CharField(max_length=50,
-                                    verbose_name=_("student_name")
-                                    )
-    student_number = models.CharField(max_length=100,
-                                      primary_key=True,
-                                      verbose_name=_("student_number")
-                                    )
-
-    current_credits = models.IntegerField(default=0,
-                                          verbose_name=_("current_credits")
-                                          )
-
-    classes_per_quarter = models.IntegerField(default=0,
-                                              verbose_name=_("classes_per_quarter"),
-                                              validators=[MaxValueValidator(3), MinValueValidator(1)]
-                                              )
-
-    #faculty_name = models.ForeignKey('Faculty', default="")
-
-    major = models.CharField(max_length=50,
-                             verbose_name=_("major")
-                             )
-    concentration = models.CharField(max_length=4,
-                                     verbose_name=_("concentration")
-                                     )
-    summer = models.BooleanField(default=False,
-                                 verbose_name=_("summer")
-                                 )
-    online = models.BooleanField(default=False,
-                                 verbose_name=_("online")
-                                 )
-
-    class_list = models.CharField(max_length=1000,
-                                  default="",
-                                  verbose_name=_("class_list")
-                                  )
-
+    student_name = models.CharField(max_length=50, verbose_name=_("student_name"))
+    student_number = models.CharField(max_length=100, primary_key=True, verbose_name=_("student_number"))
+    current_credits = models.IntegerField(default=0, verbose_name=_("current_credits"))
+    classes_per_quarter = models.IntegerField(default=0, verbose_name=_("classes_per_quarter"), validators=[MaxValueValidator(3), MinValueValidator(1)])
+    major = models.CharField(max_length=50, verbose_name=_("major"))
+    summer = models.BooleanField(default=False, verbose_name=_("summer"))
+    online = models.BooleanField(default=False, verbose_name=_("online"))
+    class_list = models.CharField(max_length=1000, default="", verbose_name=_("class_list"))
     objects = managers.ProfileManager()
 
     @property
