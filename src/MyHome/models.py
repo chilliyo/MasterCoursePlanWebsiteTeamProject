@@ -19,11 +19,11 @@ class SignUp(models.Model):
     timestamp = models.DateTimeField(auto_now_add=True, auto_now=False)
     updated = models.DateTimeField(auto_now_add=False, auto_now=True)
 
-<<<<<<< HEAD
+
     ClassesPerQuarter = (('1', '1'), ('2', '2'), ('3', '3'),)
-=======
+
     ClassesPerQuarter = (('1 Class', '1 Class'), ('2 Classes', '2 Classes'), ('3 Classes', '3 Classes'),)
->>>>>>> a67579d1ba7f2db16d2f7a13ed460455d826d93f
+
     Classes_Per_Quarter = models.CharField(max_length=120, choices=ClassesPerQuarter)
 
     MyMajor = (('Computer Science (Standard Concentration)', 'Computer Science (Standard Concentration)'),
