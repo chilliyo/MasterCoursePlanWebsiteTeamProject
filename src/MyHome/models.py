@@ -35,7 +35,8 @@ class SignUp(models.Model):
     Major = models.CharField(max_length=120, choices=MyMajor)
 
     StartQuarter = (('Fall', 'Fall'), ('Winter', 'Winter'), ('Spring', 'Spring'),)
-    Current_Credits = models.CharField(max_length=120, choices=StartQuarter)
+    #Current_Credits = models.CharField(max_length=120, choices=StartQuarter)
+    Start_Quarter = models.CharField(max_length=120, choices=StartQuarter)
 
     def __str__(self):  # Python 3.3 is __str__ and lower version is __unicode__
         return self.email
