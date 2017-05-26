@@ -9,7 +9,7 @@ class ContactForm(forms.Form):
 class SignUpForm(forms.ModelForm):
     class Meta:
         model = SignUp
-        fields = ['email', 'First_Name', 'Last_Name', 'Current_Credits', 'Classes_Per_Quarter', 'Major', 'Concentration', 'summer', 'online']
+        fields = ['email', 'First_Name', 'Last_Name', 'Major', 'Classes_Per_Quarter', 'Current_Credits', 'summer', 'online']
 
     def clean_email(self):
         email = self.cleaned_data.get('email')

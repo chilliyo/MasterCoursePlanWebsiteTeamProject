@@ -34,14 +34,22 @@
             <th>Last Name</th>
             <th>Email</th>
             <th>Major</th>
-            <th>Concentration</th>
             <th>Classes Per Quarter</th>
-            <th>Current Credits</th>
+            <th>Start Quarter</th>
             <th>Summer</th>
             <th>Online</th>
         </tr>
     {% for instance in queryset %}
-        <tr><td>{{ forloop.counter }}</td><td>{{ instance.First_Name }} </td><td>{{ instance.Last_Name }} </td><td>{{ instance.email }} </td><td>{{ instance.Major }}</td><td>{{ instance.Concentration }} </td><td>{{ instance.Classes_Per_Quarter }} </td><td>{{ instance.Current_Credits }} </td><td>{{ instance.summer }} </td><td>{{ instance.online }} </td></tr>
+        <tr><td>{{ forloop.counter }}</td>
+            <td>{{ instance.First_Name }} </td>
+            <td>{{ instance.Last_Name }} </td>
+            <td>{{ instance.email }} </td>
+            <td>{{ instance.Major }}</td>
+            <td>{{ instance.Classes_Per_Quarter }} </td>
+            <td>{{ instance.Current_Credits }}</td>
+            <td>{{ instance.summer }} </td>
+            <td>{{ instance.online }} </td>
+        </tr>
 
     {% endfor %}
     </table>
@@ -89,10 +97,6 @@
         <tr>
             <td>Major:&nbsp;&nbsp;</td>
             <td>{{ instance.Major }}</td>
-        </tr>
-        <tr>
-            <td>Consentration:&nbsp;&nbsp;</td>
-            <td>{{ instance.Concentration }}</td>
         </tr>
         <tr>
             <td>Classes Per Quarter:&nbsp;&nbsp;</td>
