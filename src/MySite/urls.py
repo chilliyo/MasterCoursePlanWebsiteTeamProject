@@ -4,13 +4,14 @@ from django.conf.urls import include
 from django.conf.urls.static import static
 from django.conf import settings
 
-from MyHome.views import home, contact
+from MyHome.views import home, contact, test
 from MySite.views import about
 
 urlpatterns = [
     url(r'^$', home, name='home'),
     url(r'^contact/$', contact, name='contact'),
     url(r'^about/$', about, name='about'),
+    url(r'^test/$', test, name='test'),
     url(r'^accounts/', include('registration.backends.simple.urls')),
     url(r'^admin/', admin.site.urls),
 ] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)

@@ -106,3 +106,7 @@ class is_Classes(models.Model):
     fall = models.BooleanField(default=False)
     winter = models.BooleanField(default=False)
     online = models.BooleanField(default=False)
+
+
+class path_test(models.Model):
+    path = models.CharField(max_length = 2000, default = '')

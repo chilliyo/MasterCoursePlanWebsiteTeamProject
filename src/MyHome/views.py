@@ -2,7 +2,8 @@ from django.conf import settings
 from django.core.mail import send_mail
 from django.shortcuts import render
 from .forms import ContactForm, SignUpForm
-from .models import SignUp
+from .models import SignUp, is_Classes
+from .is_algorithm import single_quarter_classes, get_class, get_path
 
 
 # Create your views here.
@@ -31,6 +32,17 @@ def home(request):
             "queryset": queryset
         }
     return render(request, "home.html", context)
+
+def test(request):
+
+    profile = SignUp.objects.get(First_Name = "test")
+    #test = single_quarter_classes(profile, profile.Start_Quarter)
+    #test = get_class("2", [], profile.Classes_Per_Quarter, ["None"], "Fall", profile.online, profile.summer)
+    test = get_path(profile)
+    context = {
+        "test" : test
+    }
+    return render(request, "test.html", context)
 
 def contact(request):
     title = 'Contact Us'
