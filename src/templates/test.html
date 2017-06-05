@@ -1,7 +1,27 @@
-<h1>Path result works!!</h1>
-<h2>{{test}}</h2>
+{% extends "base.html" %}
 
+{% block content %}
+<div class='row'>
+    <div class='col-sm-6 col-sm-offset-3'>
 
-{% for quarter in test %}
-    {{quarter}}<br>
-{% endfor %}
+        {% for quarter in test %}
+            {{quarter}}<br>
+        {% endfor %}
+
+    </div>
+</div>
+<hr>
+<hr>
+<hr>
+<hr>
+<hr>
+<hr>
+<hr>
+<hr>
+<hr>
+<hr>
+<div id="footer">
+    <h5><p><center>Address: 14 E Jackson Blvd, Chicago, IL-60604 | Phone Number: 123-456-7890</center></p></h5>
+    <h5><p><center>Designed and built by Team 3 Copyright &copy; 2017-2020</center></p></h5>
+</div>
+    {% endblock %}
