@@ -2,7 +2,7 @@ from django.conf import settings
 from django.core.mail import send_mail
 from django.shortcuts import render
 from .forms import ContactForm, SignUpForm
-from .models import SignUp, is_Classes
+from .models import SignUp, cs_Classes
 #from .is_algorithm import single_quarter_classes, get_class, get_path
 from .cs_algorithm import get_path
 
