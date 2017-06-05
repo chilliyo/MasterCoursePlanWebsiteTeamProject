@@ -5,6 +5,7 @@ from django.utils.translation import ugettext_lazy as _
 from django.core.validators import MaxValueValidator, MinValueValidator
 from . import managers
 
+
 # Create your models here.
 class SignUp(models.Model):
     email = models.EmailField()
@@ -57,6 +58,8 @@ class SignUp(models.Model):
 
 
 class Profile(models.Model):
+
+
     #relations
     user = models.OneToOneField(settings.AUTH_USER_MODEL, related_name="profile", verbose_name=_("user"))
     ##attributes
