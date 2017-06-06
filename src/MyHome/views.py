@@ -3,6 +3,8 @@ from django.core.mail import send_mail
 from django.shortcuts import render
 from .forms import ContactForm, SignUpForm
 from .models import SignUp, cs_Classes
+from django.http import HttpResponse
+
 #from .is_algorithm import single_quarter_classes, get_class, get_path
 from .cs_algorithm import get_path
 
@@ -17,6 +19,7 @@ def home(request):
     if form.is_valid():
         #form.save()
         instance = form.save(commit=False)
+        test_variable = instance
         full_name = form.cleaned_data.get("full_name")
         if not full_name:
             full_name = "New full name"
@@ -34,15 +37,25 @@ def home(request):
     return render(request, "home.html", context)
 
 def test(request):
+    # if request.method == 'POST':
+    #     test1 = request.POST.get('textfield', None)
 
-    profile = SignUp.objects.get(First_Name = "test")
+    queryset = SignUp.objects.all().order_by('-timestamp')
+
+    user_email = queryset[0]
+
+    profile = SignUp.objects.get(email = user_email)
+    quarter = profile.Start_Quarter
+
     #test = single_quarter_classes(profile, profile.Start_Quarter)
     #test = get_class("2", [], profile.Classes_Per_Quarter, ["None"], "Fall", profile.online, profile.summer)
     test = get_path(profile)
     context = {
-        "test" : test
+        "test" : test,
+        "quarter" : quarter
     }
     return render(request, "test.html", context)
+
 
 def contact(request):
     title = 'Contact Us'

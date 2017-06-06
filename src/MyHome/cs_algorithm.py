@@ -108,7 +108,7 @@ def get_path(profile):
     classes = 0
     i = 0
 
-    while classes != 16:
+    while classes <= 16:
         if i == (len(quarters) - 1):
             path.append(single_quarter_classes(profile, quarters[i]))
             classes = classes + maxx
