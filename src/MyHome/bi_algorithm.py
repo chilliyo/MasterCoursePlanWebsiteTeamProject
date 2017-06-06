@@ -1,11 +1,13 @@
-from .models import cs_Classes
+from .models import is_Classes
 import re
 
 
 
 classes_taken = ["None",'']
-intro_classes = ["CSC400","CSC401", "CSC402","CSC403","CSC406", "CSC407"]
-foundation_classes = ["CSC421","CSC435","CSC447","CSC453"]
+advanced_classes = ["CSC423","IS467", "IS549", "IS574"]
+foundation_classes = ["IS430","IS422","IS421","CSC451"]
+intro_classes = ["IT411", "IT403"]
+capstone = "IS577"
 
 
 is_class_reqs = [0,4,0,8,1]
@@ -13,13 +15,13 @@ is_class_reqs = [0,4,0,8,1]
 
 def quarter_classes(quarter, classType):
     if quarter == "Fall":
-        candidates = cs_Classes.objects.filter(class_type= classType, fall = True)
+        candidates = is_Classes.objects.filter(class_type= classType, fall = True)
     elif quarter == "Summer":
-        candidates = cs_Classes.objects.filter(class_type= classType, summer = True)
+        candidates = is_Classes.objects.filter(class_type= classType, summer = True)
     elif quarter == "Winter":
-        candidates = cs_Classes.objects.filter(class_type= classType, winter = True)
+        candidates = is_Classes.objects.filter(class_type= classType, winter = True)
     else:
-        candidates = cs_Classes.objects.filter(class_type= classType, spring = True)
+        candidates = is_Classes.objects.filter(class_type= classType, spring = True)
 
     return candidates
 
@@ -63,6 +65,8 @@ def remove_spaces(string):
             newstring = newstring+i
     return newstring
 
+
+
 def get_maxx(class_arg):
     for i in class_arg:
         if i.isdigit():
@@ -91,9 +95,13 @@ def single_quarter_classes(profile, quarter):
         elif check_completion(foundation_classes, classes_taken) == False:
             clazz = get_class("2", schedule, maxx, classes_taken, quarter, profile.online, profile.summer)
             schedule.append(clazz)
+
+        elif check_completion(advanced_classes, classes_taken) == False:
+            clazz = get_class("3", schedule, maxx, classes_taken, quarter, profile.online, profile.summer)
+            schedule.append(clazz)
             #classes_taken.append(clazz)
         else:
-            clazz = get_class("3", schedule, maxx, classes_taken, quarter, profile.online, profile.summer)
+            clazz = get_class("4", schedule, maxx, classes_taken, quarter, profile.online, profile.summer)
             schedule.append(clazz)
             #classes_taken.append(clazz)
 
@@ -102,7 +110,7 @@ def single_quarter_classes(profile, quarter):
 
 
 
-def cs_get_path(profile):
+def bi_get_path(profile):
     maxx = get_maxx(profile.Classes_Per_Quarter)
     if profile.summer:
         quarters = ["Fall", "Winter", "Spring", "Summer"]
@@ -112,7 +120,7 @@ def cs_get_path(profile):
     classes = 0
     i = 0
 
-    while classes <= 16:
+    while classes <= 14:
         if i == (len(quarters) - 1):
             path.append(single_quarter_classes(profile, quarters[i]))
             classes = classes + maxx

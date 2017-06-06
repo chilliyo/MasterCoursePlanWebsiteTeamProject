@@ -5,8 +5,13 @@ from .forms import ContactForm, SignUpForm
 from .models import SignUp, cs_Classes
 from django.http import HttpResponse
 
-#from .is_algorithm import single_quarter_classes, get_class, get_path
-from .cs_algorithm import get_path
+from .is_algorithm import is_get_path
+from .cs_algorithm import cs_get_path
+from .ba_algorithm import ba_get_path
+from .bi_algorithm import bi_get_path
+from .da_algorithm import da_get_path
+from .em_algorithm import em_get_path
+
 
 # Create your views here.
 def home(request):
@@ -49,7 +54,19 @@ def test(request):
 
     #test = single_quarter_classes(profile, profile.Start_Quarter)
     #test = get_class("2", [], profile.Classes_Per_Quarter, ["None"], "Fall", profile.online, profile.summer)
-    test = get_path(profile)
+    if profile.Major == 'Computer Science (Standard Concentration)':
+        test = cs_get_path(profile)
+    elif profile.Major == 'Information Systems (Business Analysis/Systems Analysis)':
+        test = ba_get_path(profile)
+    elif profile.Major == 'Information Systems (Business Intelligence Concentration)':
+        test = bi_get_path(profile)
+    elif profile.Major == 'Information Systems (Database Administration Concentration)':
+        test = da_get_path(profile)
+    elif profile.Major == 'Information Systems (IT Enterprise Management Concentration)':
+        test = em_get_path(profile)
+    else:
+        test = is_get_path(profile)
+
     context = {
         "test" : test,
         "quarter" : quarter
