@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<h3>Hi, {{first_name}}!</h3>
+<h4>Your Starting Quarter will be {{quarter}}.</h4>
+<h4>The number of quarter you will spend for your <i>{{major}}</i> degree is {{length}}.</h4>
+<h4>Below is your quarter and class path.</h4>
+<h4>Your path {{include_summer}} based on your form.</h4>
+
+<input type="button" class='btn btn-default' value="Generate a new report" onclick="window.location.href='/'">
+
+
+
+<div class='row'>
+    <br class='col-sm-6 col-sm-offset-3'>
+        {% for q in test %}
+            
+            {% for class in q %}
+                {{class}}<br>
+        {% endfor %}<hr>
+        {% endfor %}
+    </div>
+</div>
+
+<div id="footer">
+    <h5><p><center>Address: 14 E Jackson Blvd, Chicago, IL-60604 | Phone Number: 123-456-7890</center></p></h5>
+    <h5><p><center>Designed and built by Team 3 Copyright &copy; 2017-2020</center></p></h5>
+</div>
+    {% endblock %}
