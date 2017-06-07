@@ -2,12 +2,17 @@ from .models import is_Classes
 import re
 
 
+class Contents:
+    classes_taken = ["None",'']
+    advanced_classes = ["ECT424", "IS556", "IS570", "IS535"]
+    foundation_classes = ["IS430","IS422","IS421","CSC451"]
 
-classes_taken = ["None",'']
-advanced_classes = ["ECT424", "IS556", "IS570", "IS535"]
-foundation_classes = ["IS430","IS422","IS421","CSC451"]
+    def __init__():
+        self.classes_taken = ["None",'']
+        self.advanced_classes = ["ECT424", "IS556", "IS570", "IS535"]
+        self.foundation_classes = ["IS430","IS422","IS421","CSC451"]
 
-
+student = Contents
 is_class_reqs = [0,4,0,8,1]
 
 
@@ -84,15 +89,15 @@ def single_quarter_classes(profile, quarter):
     i = 1
 
     for j in range(0,maxx):
-        if check_completion(foundation_classes, classes_taken) == False:
-            clazz = get_class("2", schedule, maxx, classes_taken, quarter, profile.online, profile.summer)
+        if check_completion(student.foundation_classes, student.classes_taken) == False:
+            clazz = get_class("2", schedule, maxx, student.classes_taken, quarter, profile.online, profile.summer)
             schedule.append(clazz)
             #classes_taken.append(clazz)
-        elif check_completion(advanced_classes, classes_taken) == False:
-            clazz = get_class("3", schedule, maxx, classes_taken, quarter, profile.online, profile.summer)
+        elif check_completion(student.advanced_classes, student.classes_taken) == False:
+            clazz = get_class("3", schedule, maxx, student.classes_taken, quarter, profile.online, profile.summer)
             schedule.append(clazz)
         else:
-            clazz = get_class("4", schedule, maxx, classes_taken, quarter, profile.online, profile.summer)
+            clazz = get_class("4", schedule, maxx, student.classes_taken, quarter, profile.online, profile.summer)
             schedule.append(clazz)
             #classes_taken.append(clazz)
 
@@ -120,5 +125,5 @@ def em_get_path(profile):
             path.append(single_quarter_classes(profile, quarters[i]))
             classes = classes + maxx
             i = i + 1
-
+    student.classes_taken = ["None", ""]
     return path
