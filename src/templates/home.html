@@ -20,7 +20,10 @@
     <div class='col-sm-5 col-sm-offset-6'>
 <form method='POST' action=''>{% csrf_token %}
     {{ form|crispy }}
-    <input class='btn btn-default' type='Submit' value='Run When-If Report'/>
+    <h3>Step 1</h3>
+    <input class='btn btn-default' type='Submit' value='Submit'/>
+    <h3>Step 2</h3>
+    <input class='btn btn-default' onclick="window.location.href='/result/'" type='button' value='See Report'/>
 </form>
     </div>
 </div>

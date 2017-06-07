@@ -41,7 +41,7 @@ def home(request):
         }
     return render(request, "home.html", context)
 
-def test(request):
+def result(request):
     # if request.method == 'POST':
     #     test1 = request.POST.get('textfield', None)
 
@@ -50,7 +50,15 @@ def test(request):
     user_email = queryset[0]
 
     profile = SignUp.objects.get(email = user_email)
-    quarter = profile.Start_Quarter
+    quarter = profile.Start_Quarter.upper()
+    first_name = profile.First_Name
+    major = profile.Major
+    summer = profile.summer
+    
+    if summer == True:
+        include_summer = "INCLUDES SUMMER QUARTER"
+    elif summer == False:
+        include_summer = "DOES NOT INCLUES SUMMER QUARTER"
 
     #test = single_quarter_classes(profile, profile.Start_Quarter)
     #test = get_class("2", [], profile.Classes_Per_Quarter, ["None"], "Fall", profile.online, profile.summer)
@@ -67,11 +75,16 @@ def test(request):
     else:
         test = is_get_path(profile)
 
+    length = len(test)
     context = {
         "test" : test,
-        "quarter" : quarter
+        "quarter" : quarter,
+        "first_name": first_name,
+        "major": major,
+        "length": length,
+        "include_summer": include_summer
     }
-    return render(request, "test.html", context)
+    return render(request, "result.html", context)
 
 
 def contact(request):
